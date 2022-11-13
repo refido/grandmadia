@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import DetailPage from './page/DetailPage'
 import LandingPage from './page/LandingPage'
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route exact path='/' element={<LandingPage />} />
+        <Route exact path='/detail/' element={<DetailPage />} />  
       </Routes>
     </BrowserRouter >
   )
