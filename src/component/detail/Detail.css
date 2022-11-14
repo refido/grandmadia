@@ -65,6 +65,8 @@
 
 .recomendation {
 	margin-top: 40px;
+	background-color: #ccdfef;
+	border-radius: 20px;
 }
 
 .list-card {
@@ -80,5 +82,9 @@
 
 .body-card{
 	max-height: max-content;
+}
+
+.detailPage{
+	margin-top: 96px;
 }
 /* END FOR DETAIL PAGE */

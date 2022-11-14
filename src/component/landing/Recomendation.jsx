@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import { Link } from "react-router-dom";
 import Cover_28 from "../../asset/landing/28_cov.jpg";
 import { __getBooks } from "../../redux/modules/slice";
 
@@ -41,7 +41,11 @@ const Recomendation = () => {
 							<div className="book-identity">
 								<p className="author p-0 mb-1">{book.author}</p>
 								<p className="title p-0 m-0">{book.title}</p>
+								<div>
+								<Link to ={`detail/${book.id}`} key={book.id}>
 								<p className="price p-0 m-0">Rp {book.newPrice.toLocaleString().replace(",", ".")}</p>
+								</Link>
+								</div>
 								<p className="original-price p-0 m-0">Rp {book.oldPrice.toLocaleString().replace(",", ".")}</p>
 							</div>
 						</div>
