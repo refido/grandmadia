@@ -56,6 +56,7 @@ nav .login-button {
 	padding-top: 20px;
 	background-color: #fff;
 	width: 100%;
+	overflow-y: scroll;
 	box-shadow: 0 0 0 0 rgb(0 0 0 / 12%), 0 4px 4px 0 rgb(0 0 0 / 24%);
 }
 
@@ -170,6 +171,26 @@ nav img {
 	font-style: italic;
 }
 
+/* section-popular */
+
+.section-popular {
+	border-bottom: 0.1px solid gray;
+	padding-bottom: 40px;
+}
+
+.section-popular h2 {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.section-popular .banner {
+	max-width: 190px;
+}
+
+.section-popular .banner img {
+	width: 100%;
+}
+
 /* Footer */
 
 footer .footer-1 {
@@ -194,7 +215,7 @@ footer .footer-1 .email-input-button {
 	border: none;
 	border-radius: 0px 10px 10px 0px;
 	background-color: #0060ae;
-    color: #fff;
+	color: #fff;
 }
 
 footer .footer-2 {

@@ -71,6 +71,8 @@ const Navbar = () => {
 								<li>Teknologi</li>
 								<li>Mainan & Hobi</li>
 								<li>Makanan & Minuman</li>
+								<li>Olahraga</li>
+								<li>Peralatan Kesehatan</li>
 							</ul>
 						</div>
 						<div className="col-9">
