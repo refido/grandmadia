@@ -130,6 +130,11 @@ nav img {
 
 /* section-recomendation */
 
+.section-recomendation {
+	border-bottom: 0.1px solid gray;
+	padding-bottom: 40px;
+}
+
 .section-recomendation h2 {
 	font-size: 24px;
 	font-weight: 700;
