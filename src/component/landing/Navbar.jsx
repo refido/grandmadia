@@ -59,7 +59,7 @@ const Navbar = () => {
 			<div id="category-content" className={isActive ? "d-content d-block" : "d-content d-none"}>
 				<div className="container">
 					<div className="row">
-						<div className="col-4">
+						<div className="col-3">
 							<ul>
 								<li>Mega Best Seller</li>
 								<li>Buku</li>
@@ -71,9 +71,19 @@ const Navbar = () => {
 								<li>Teknologi</li>
 								<li>Mainan & Hobi</li>
 								<li>Makanan & Minuman</li>
+								<li>Olahraga</li>
+								<li>Peralatan Kesehatan</li>
 							</ul>
 						</div>
-						<div className="col-8"></div>
+						<div className="col-9">
+							<div class="row">
+								<div class="col-6 category-item">Pertanian</div>
+								<div class="col-6 category-item">Seni & Desain</div>
+								<div class="col-6 category-item">Bisnis & Ekonomi</div>
+								<div class="col-6 category-item">Anak-anak</div>
+								<div class="col-6 category-item">Komik</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

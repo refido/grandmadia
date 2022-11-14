@@ -1,4 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
+
 /* START FOR LANDING PAGE */
+
+* {
+	font-family: "Nunito", serif;
+}
 
 /* Container Layout */
 
@@ -50,11 +56,21 @@ nav .login-button {
 	padding-top: 20px;
 	background-color: #fff;
 	width: 100%;
+	overflow-y: scroll;
 	box-shadow: 0 0 0 0 rgb(0 0 0 / 12%), 0 4px 4px 0 rgb(0 0 0 / 24%);
 }
 
-.d-content .row .col-8 {
-	border-left: 1px solid gray;
+.d-content .row .col-9 {
+	border-left: 0.5px solid gray;
+}
+
+.d-content .row {
+	margin-left: 20px;
+}
+
+.d-content .row .category-item {
+	font-size: 14px;
+	padding-bottom: 14px;
 }
 
 .d-content ul {
@@ -155,6 +171,26 @@ nav img {
 	font-style: italic;
 }
 
+/* section-popular */
+
+.section-popular {
+	border-bottom: 0.1px solid gray;
+	padding-bottom: 40px;
+}
+
+.section-popular h2 {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.section-popular .banner {
+	max-width: 190px;
+}
+
+.section-popular .banner img {
+	width: 100%;
+}
+
 /* Footer */
 
 footer .footer-1 {
@@ -167,10 +203,19 @@ footer .footer-1 h2 {
 }
 
 footer .footer-1 .email-input {
-	width: 500px;
+	width: 450px;
 	height: 40px;
 	border: none;
-	border-radius: 10px;
+	border-radius: 10px 0px 0px 10px;
+}
+
+footer .footer-1 .email-input-button {
+	width: 90px;
+	height: 40px;
+	border: none;
+	border-radius: 0px 10px 10px 0px;
+	background-color: #0060ae;
+	color: #fff;
 }
 
 footer .footer-2 {
@@ -198,6 +243,20 @@ footer .footer-2 ul li {
 
 footer .footer-2 span {
 	font-size: 14px;
+}
+
+footer .footer-2 .download-icon {
+	margin-top: 10px;
+}
+
+footer .footer-2 .download-icon a {
+	display: block;
+	max-width: 120px;
+}
+
+footer .footer-2 .download-icon a img {
+	width: 120px;
+	height: 30px;
 }
 
 footer .footer-3 {
