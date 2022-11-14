@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Icon_helper from "../../asset/landing/icon_helper.png";
 import Icon_grandemedia from "../../asset/landing/icon_grandemedia.jpg";
 import Icon_cart from "../../asset/landing/icon_cart.png";
 
 const Navbar = () => {
+	const [isActive, setActive] = useState(false);
+
+	const toggleClass = () => {
+		setActive(!isActive);
+	};
 	return (
 		<div className="section-navbar fixed-top">
 			<div className="helper">
@@ -26,7 +31,9 @@ const Navbar = () => {
 					<div className="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
 						<div className="navbar-category">
 							<ul className="navbar-nav me-auto mb-2 mb-lg-0">
-								<li className="nav-item dropdown">Kategori</li>
+								<li className="nav-item dropdown" onClick={toggleClass}>
+									Kategori
+								</li>
 							</ul>
 						</div>
 						<form className="d-flex search" role="search">
@@ -35,9 +42,7 @@ const Navbar = () => {
 						<div className="navbar-buttons">
 							<ul className="navbar-nav me-auto mb-2 mb-lg-0">
 								<li className="nav-item me-5">
-									<a className="nav-link login-button active" aria-current="page" href="index.html">
-										Masuk
-									</a>
+									<div className="nav-link login-button">Masuk</div>
 								</li>
 								<li className="nav-item">
 									<a className="nav-link active" aria-current="page" href="index.html">
@@ -49,6 +54,27 @@ const Navbar = () => {
 					</div>
 				</div>
 			</nav>
+			<div id="category-content" className={isActive ? "d-content d-block" : "d-content d-none"}>
+				<div className="container">
+					<div className="row">
+						<div className="col-4">
+							<ul>
+								<li>Mega Best Seller</li>
+								<li>Buku</li>
+								<li>ETICKET</li>
+								<li>Stationery, Sekolah & Kantor</li>
+								<li>Ebook</li>
+								<li>Majalah</li>
+								<li>Fashion & Aksesoris</li>
+								<li>Teknologi</li>
+								<li>Mainan & Hobi</li>
+								<li>Makanan & Minuman</li>
+							</ul>
+						</div>
+						<div className="col-8"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 };
