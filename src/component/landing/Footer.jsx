@@ -19,7 +19,8 @@ const Footer = () => {
 							<h2>Kejutan spesial dari kami hanya untukmu</h2>
 						</div>
 						<div className="col-6">
-							<input className="email-input" type="text"></input>
+							<input className="email-input" type="text" placeholder="Masukkan email anda disini"></input>
+							<button className="email-input-button">Daftar</button>
 						</div>
 					</div>
 				</div>

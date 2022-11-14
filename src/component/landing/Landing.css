@@ -182,10 +182,19 @@ footer .footer-1 h2 {
 }
 
 footer .footer-1 .email-input {
-	width: 500px;
+	width: 450px;
 	height: 40px;
 	border: none;
-	border-radius: 10px;
+	border-radius: 10px 0px 0px 10px;
+}
+
+footer .footer-1 .email-input-button {
+	width: 90px;
+	height: 40px;
+	border: none;
+	border-radius: 0px 10px 10px 0px;
+	background-color: #0060ae;
+    color: #fff;
 }
 
 footer .footer-2 {
