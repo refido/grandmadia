@@ -1,27 +1,15 @@
-import "../App.css";
+import "../component/detail/Detail.css";
+import Navbar from "../component/landing/Navbar";
+import Header from "../component/landing/Header";
+import Footer from "../component/landing/Footer";
+import Recomendation from "../component/landing/Recomendation";
+
 
 const DetailPage = () => {
   return (
     <div className="containerDetail">
+      <Navbar />
       <h1 className="main-title">Book Detail Page</h1>
-      <div className="header">
-        <div className="container text-center">
-          <div className="row">
-            <div className="col title-grandmedia">
-              <h4>GrandeMedia.com </h4>
-            </div>
-            <div className="col-6">
-              <input
-                className="form-control"
-                placeholder="Search Product"
-              ></input>
-            </div>
-            <div className="col title-grandmedia">
-              <h4>Login</h4>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="body">
         <div className="container">
           <div className="grid grid-cols-3">
@@ -77,82 +65,11 @@ const DetailPage = () => {
 
           {/* start grid 5 */}
           <div className="recomendation">
-            <h4> Recomendation</h4>
-            <div className="grid grid-cols-5">
-              <div class="card list-card">
-                <img
-                  src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//94/MTA-28352263/no_brand_novel_tere_liye_bedebah_di_ujung_tanduk_full01_emvp6a1.jpg"
-                  className="card-img-top"
-                  alt=""
-                ></img>
-                <div className="card-body">
-                  <p>
-                    ae ligula commodo ultricies. Vestibulum sodales sapien quis
-                    quam blandit suscipit. Etiam varius suscipit vestibulum.
-                    non. Nullam eu tempus quam. Ut mattis lobortis blandit
-                  </p>
-                </div>
-              </div>
-              <div class="card list-card">
-                <img
-                  src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//94/MTA-28352263/no_brand_novel_tere_liye_bedebah_di_ujung_tanduk_full01_emvp6a1.jpg"
-                  className="card-img-top"
-                  alt=""
-                ></img>
-                <div className="card-body">
-                  <p>
-                    ae ligula commodo ultricies. Vestibulum sodales sapien quis
-                    quam blandit suscipit. Etiam varius suscipit vestibulum.
-                    non. Nullam eu tempus quam. Ut mattis lobortis blandit
-                  </p>
-                </div>
-              </div>
-              <div class="card list-card">
-                <img
-                  src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//94/MTA-28352263/no_brand_novel_tere_liye_bedebah_di_ujung_tanduk_full01_emvp6a1.jpg"
-                  className="card-img-top"
-                  alt=""
-                ></img>
-                <div className="card-body">
-                  <p>
-                    ae ligula commodo ultricies. Vestibulum sodales sapien quis
-                    quam blandit suscipit. Etiam varius suscipit vestibulum.
-                    non. Nullam eu tempus quam. Ut mattis lobortis blandit
-                  </p>
-                </div>
-              </div>
-              <div class="card list-card">
-                <img
-                  src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//94/MTA-28352263/no_brand_novel_tere_liye_bedebah_di_ujung_tanduk_full01_emvp6a1.jpg"
-                  className="card-img-top"
-                  alt=""
-                ></img>
-                <div className="card-body">
-                  <p>
-                    ae ligula commodo ultricies. Vestibulum sodales sapien quis
-                    quam blandit suscipit. Etiam varius suscipit vestibulum.
-                    non. Nullam eu tempus quam. Ut mattis lobortis blandit
-                  </p>
-                </div>
-              </div>
-              <div class="card">
-                <img
-                  src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//94/MTA-28352263/no_brand_novel_tere_liye_bedebah_di_ujung_tanduk_full01_emvp6a1.jpg"
-                  className="card-img-top"
-                  alt=""
-                ></img>
-                <div className="card-body">
-                  <p>
-                    ae ligula commodo ultricies. Vestibulum sodales sapien quis
-                    quam blandit suscipit. Etiam varius suscipit vestibulum.
-                    non. Nullam eu tempus quam. Ut mattis lobortis blandit
-                  </p>
-                </div>
-              </div>
-            </div>
+          <Recomendation />
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
