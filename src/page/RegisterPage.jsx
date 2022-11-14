@@ -1,13 +1,13 @@
-import Navbar from "../component/login/Navbar";
-import Content from "../component/login/Content";
+import Navbar from "../component/register/Navbar";
+import Content from "../component/register/Content";
 
 const RegisterPage = () => {
-    return (
-      <div>
-      <Navbar/>
-      <Content/>
+  return (
+    <div>
+      <Navbar />
+      <Content />
     </div>
-      );
+  );
 };
 
 export default RegisterPage;
