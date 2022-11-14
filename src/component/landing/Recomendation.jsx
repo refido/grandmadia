@@ -41,8 +41,8 @@ const Recomendation = () => {
 							<div className="book-identity">
 								<p className="author p-0 mb-1">{book.author}</p>
 								<p className="title p-0 m-0">{book.title}</p>
-								<p className="price p-0 m-0">Rp {book.newPrice.toLocaleString().replace(',','.')}</p>
-								<p className="original-price p-0 m-0">Rp {book.oldPrice.toLocaleString().replace(',','.')}</p>
+								<p className="price p-0 m-0">Rp {book.newPrice.toLocaleString().replace(",", ".")}</p>
+								<p className="original-price p-0 m-0">Rp {book.oldPrice.toLocaleString().replace(",", ".")}</p>
 							</div>
 						</div>
 					</div>
