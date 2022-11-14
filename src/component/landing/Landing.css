@@ -1,4 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
+
 /* START FOR LANDING PAGE */
+
+* {
+	font-family: "Nunito", serif;
+}
 
 /* Container Layout */
 
@@ -53,8 +59,17 @@ nav .login-button {
 	box-shadow: 0 0 0 0 rgb(0 0 0 / 12%), 0 4px 4px 0 rgb(0 0 0 / 24%);
 }
 
-.d-content .row .col-8 {
-	border-left: 1px solid gray;
+.d-content .row .col-9 {
+	border-left: 0.5px solid gray;
+}
+
+.d-content .row {
+	margin-left: 20px;
+}
+
+.d-content .row .category-item {
+	font-size: 14px;
+	padding-bottom: 14px;
 }
 
 .d-content ul {
