@@ -9,6 +9,8 @@ import Icon_category_Mainan from "../../asset/landing/Icon_category_Mainan.png";
 import Icon_category_Print_on_Demand from "../../asset/landing/Icon_category_Print_on_Demand.png";
 import Icon_category_Voucher_Gramedia_Academy_2 from "../../asset/landing/Icon_category_Voucher_Gramedia_Academy_2.png";
 
+import "./Landing.css";
+
 const Category = () => {
 	return (
 		<div className="section-category container mt-4">

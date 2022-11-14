@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import Cover_28 from "../../asset/landing/28_cov.jpg";
 import { __getBooks } from "../../redux/modules/slice";
 
+import "./Landing.css";
+
 const Recomendation = () => {
 	const { books, isLoading, error } = useSelector((state) => state.books);
 

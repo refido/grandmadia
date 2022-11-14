@@ -4,6 +4,8 @@ import Icon_helper from "../../asset/landing/icon_helper.png";
 import Icon_grandemedia from "../../asset/landing/icon_grandemedia.jpg";
 import Icon_cart from "../../asset/landing/icon_cart.png";
 
+import "./Landing.css";
+
 const Navbar = () => {
 	const [isActive, setActive] = useState(false);
 

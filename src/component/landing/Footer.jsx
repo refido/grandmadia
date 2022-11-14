@@ -5,6 +5,8 @@ import Icon_instagram from "../../asset/landing/instagram.png";
 import Icon_twitter from "../../asset/landing/twitter.png";
 import Icon_facebook from "../../asset/landing/facebook.png";
 
+import "./Landing.css";
+
 const Footer = () => {
 	return (
 		<footer>
