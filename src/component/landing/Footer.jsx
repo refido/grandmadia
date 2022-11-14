@@ -1,6 +1,8 @@
 import React from "react";
 
 import Icon_grandemedia from "../../asset/landing/icon_grandemedia.jpg";
+import Icon_playstore from "../../asset/landing/play-store.png";
+import Icon_appstore from "../../asset/landing/app-store.png";
 import Icon_instagram from "../../asset/landing/instagram.png";
 import Icon_twitter from "../../asset/landing/twitter.png";
 import Icon_facebook from "../../asset/landing/facebook.png";
@@ -17,7 +19,8 @@ const Footer = () => {
 							<h2>Kejutan spesial dari kami hanya untukmu</h2>
 						</div>
 						<div className="col-6">
-							<input className="email-input" type="text"></input>
+							<input className="email-input" type="text" placeholder="Masukkan email anda disini"></input>
+							<button className="email-input-button">Daftar</button>
 						</div>
 					</div>
 				</div>
@@ -53,6 +56,18 @@ const Footer = () => {
 						<div className="col-3">
 							<p>Aplikasi Seluler Kami</p>
 							<span>Download aplikasi Grandemedia.com yang tersedia di seluruh perangkat iOS dan Android</span>
+							<div className="row download-icon">
+								<div className="col-6">
+									<a className="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.gramedia.retail&pli=1">
+										<img src={Icon_playstore} alt="Play Store"></img>
+									</a>
+								</div>
+								<div className="col-6">
+									<a target="_blank" rel="noreferrer" href="https://itunes.apple.com/id/app/gramedia/id1422591223?mt=8">
+										<img src={Icon_appstore} alt="App Store"></img>
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
