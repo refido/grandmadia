@@ -21,10 +21,15 @@ nav .navbar-brand img {
 	width: 230px;
 }
 
-nav .nav-link {
+nav .dropdown {
 	color: #0060ae;
 	font-weight: 700;
 	font-size: 16px;
+	padding-left: 34px;
+}
+
+nav .dropdown:hover {
+	cursor: pointer;
 }
 
 nav .nav-link.login-button a {

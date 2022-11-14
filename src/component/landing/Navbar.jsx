@@ -26,11 +26,7 @@ const Navbar = () => {
 					<div className="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
 						<div className="navbar-category">
 							<ul className="navbar-nav me-auto mb-2 mb-lg-0">
-								<li className="nav-item dropdown">
-									<a className="nav-link dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-										Kategori
-									</a>
-								</li>
+								<li className="nav-item dropdown">Kategori</li>
 							</ul>
 						</div>
 						<form className="d-flex search" role="search">
