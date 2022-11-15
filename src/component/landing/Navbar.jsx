@@ -8,8 +8,18 @@ import "./Landing.css";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-	const [isActive, setActive] = useState(false);
+	const [Input, setInput] = useState("");
 
+	const onInputChange = (event) => {
+		setInput(event.target.value);
+	};
+
+	const submitHandler = (event) => {
+		event.preventDefault();
+		alert(Input);
+	};
+
+	const [isActive, setActive] = useState(false);
 	const toggleClass = () => {
 		setActive(!isActive);
 	};
@@ -43,8 +53,8 @@ const Navbar = () => {
 								</li>
 							</ul>
 						</div>
-						<form className="d-flex search" role="search">
-							<input className="form-control search-box me-2" type="search" placeholder="Cari Produk, Judul Buku, Penulis" aria-label="Search"></input>
+						<form className="d-flex search" role="search" onSubmit={submitHandler}>
+							<input className="form-control search-box me-2" type="search" placeholder="Cari Produk, Judul Buku, Penulis" value={Input} onChange={onInputChange} aria-label="Search"></input>
 						</form>
 						<div className="navbar-buttons">
 							<ul className="navbar-nav me-auto mb-2 mb-lg-0">
