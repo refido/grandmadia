@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { __getBooks } from "../../redux/modules/slice";
 
 import Banner from "../../asset/landing/Banner_Category_Buku_Terpouler.png";
-import Cover_28 from "../../asset/landing/28_cov.jpg";
 
 const Popular = () => {
+	const { books, isLoading, error } = useSelector((state) => state.books);
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(__getBooks());
+	}, []);
+
+	if (isLoading) {
+		return <h1>Loading</h1>;
+	}
+
+	if (error) {
+		//if error exists
+		return (
+			<div className="section-recomendation container my-5">
+				<h1>Error in requesting data...</h1>
+			</div>
+		);
+	}
 	return (
 		<div className="section-popular container my-5">
 			<h2>Buku-Buku Terpopuler</h2>
@@ -15,71 +36,21 @@ const Popular = () => {
 				</div>
 				<div className="col-9">
 					<div className="row">
-						<div className="col">
-							<div className="book-item">
-								<div className="book-cover">
-									<img src={Cover_28} alt=""></img>
-								</div>
-								<div className="book-identity">
-									<p className="author p-0 mb-1">Author</p>
-									<p className="title p-0 m-0">Title</p>
-									<p className="price p-0 m-0">Rp.000</p>
-									<p className="original-price p-0 m-0">Rp.000</p>
-								</div>
-							</div>
-						</div>
-						<div className="col">
-							<div className="book-item">
-								<div className="book-cover">
-									<img src={Cover_28} alt=""></img>
-								</div>
-								<div className="book-identity">
-									<p className="author p-0 mb-1">Author</p>
-									<p className="title p-0 m-0">Title</p>
-									<p className="price p-0 m-0">Rp.000</p>
-									<p className="original-price p-0 m-0">Rp.000</p>
+						{books.slice(0, 5).map((book) => (
+							<div className="col" key={book.id}>
+								<div className="book-item">
+									<div className="book-cover">
+										<img src={book.cover} alt=""></img>
+									</div>
+									<div className="book-identity">
+										<p className="author p-0 mb-1">{book.author}</p>
+										<p className="title p-0 m-0">{book.title}</p>
+										<p className="price p-0 m-0">Rp {book.newPrice.toLocaleString().replace(",", ".")}</p>
+										<p className="original-price p-0 m-0">Rp {book.oldPrice.toLocaleString().replace(",", ".")}</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div className="col">
-							<div className="book-item">
-								<div className="book-cover">
-									<img src={Cover_28} alt=""></img>
-								</div>
-								<div className="book-identity">
-									<p className="author p-0 mb-1">Author</p>
-									<p className="title p-0 m-0">Title</p>
-									<p className="price p-0 m-0">Rp.000</p>
-									<p className="original-price p-0 m-0">Rp.000</p>
-								</div>
-							</div>
-						</div>
-						<div className="col">
-							<div className="book-item">
-								<div className="book-cover">
-									<img src={Cover_28} alt=""></img>
-								</div>
-								<div className="book-identity">
-									<p className="author p-0 mb-1">Author</p>
-									<p className="title p-0 m-0">Title</p>
-									<p className="price p-0 m-0">Rp.000</p>
-									<p className="original-price p-0 m-0">Rp.000</p>
-								</div>
-							</div>
-						</div>
-						<div className="col">
-							<div className="book-item">
-								<div className="book-cover">
-									<img src={Cover_28} alt=""></img>
-								</div>
-								<div className="book-identity">
-									<p className="author p-0 mb-1">Author</p>
-									<p className="title p-0 m-0">Title</p>
-									<p className="price p-0 m-0">Rp.000</p>
-									<p className="original-price p-0 m-0">Rp.000</p>
-								</div>
-							</div>
-						</div>
+						))}
 					</div>
 				</div>
 			</div>

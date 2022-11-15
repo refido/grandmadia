@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import Cover_28 from "../../asset/landing/28_cov.jpg";
 import { __getBooks } from "../../redux/modules/slice";
 
 import "./Landing.css";
@@ -22,7 +21,7 @@ const Recomendation = () => {
 		//if error exists
 		return (
 			<div className="section-recomendation container my-5">
-				<h1>Error</h1>
+				<h1>Error in requesting data...</h1>
 			</div>
 		);
 	}
