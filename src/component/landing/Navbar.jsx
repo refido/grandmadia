@@ -5,6 +5,7 @@ import Icon_grandemedia from "../../asset/landing/icon_grandemedia.jpg";
 import Icon_cart from "../../asset/landing/icon_cart.png";
 
 import "./Landing.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 	const [isActive, setActive] = useState(false);
@@ -44,7 +45,9 @@ const Navbar = () => {
 						<div className="navbar-buttons">
 							<ul className="navbar-nav me-auto mb-2 mb-lg-0">
 								<li className="nav-item me-5">
-									<div className="nav-link login-button">Masuk</div>
+									<Link to ={`login`}>
+										<div className="nav-link login-button">Masuk</div>
+									</Link>
 								</li>
 								<li className="nav-item">
 									<a className="nav-link active" aria-current="page" href="index.html">
