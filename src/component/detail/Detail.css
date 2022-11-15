@@ -49,8 +49,10 @@
 
 .card-body {
 	margin-left: 30px;
-	border-radius: 5px;
-	/* border-width: 10px; */
+    border-radius: 5px;
+    /* border-width: 10px; */
+    height: 99px;
+    overflow-y: auto;
 }
 .card {
 	width: 10rem;
@@ -87,4 +89,6 @@
 .detailPage{
 	margin-top: 96px;
 }
+
+
 /* END FOR DETAIL PAGE */

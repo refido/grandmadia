@@ -42,9 +42,9 @@ const DetailPage = () => {
             <div className="grid grid-rows-1 grid-flow-col gap-4 ">
               <div className="row-span-8">
                 <h2>{detail.title}</h2>
-                <hr></hr>
+                {/* <hr></hr> */}
                 <h4>Description</h4>
-                <p>{detail.description}</p>
+                <p className="desc">{detail.description}</p>
               </div>
               <div className="detailPage">
                 <h4>Detail</h4>
