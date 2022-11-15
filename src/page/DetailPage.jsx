@@ -98,7 +98,6 @@ const DetailPage = () => {
 						<div className="grid grid-rows-1 grid-flow-col gap-4 ">
 							<div className="row-span-2">
 								<div className="card-body  col-10">
-									{/* <h5 className="card-title"> Information </h5> */}
 									<p className="card-text">Mohon pilih format terlebih dahulu</p>
 								</div>
 							</div>
