@@ -48,11 +48,19 @@
 }
 
 .card-body {
-	margin-left: 30px;
-    border-radius: 5px;
-    /* border-width: 10px; */
-    height: 99px;
-    overflow-y: auto;
+	width: 100%;
+    font-family: Nunito,serif;
+    padding: 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(229 229 229 / 80%);
+}
+
+.card-text{
+	margin-bottom: 5px;
+    word-wrap: break-word;
+	color: #0060ae;
+	font-size: 25px;
 }
 .card {
 	width: 10rem;
@@ -61,6 +69,19 @@
 	width: 18rem;
 }
 
+.title-desc{
+	font-family: Nunito,serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #151515;
+}
+
+/* .body {
+    margin: 0;
+    padding-top: 88px;
+    color: #0060ae;
+    background: #fff;
+} */
 /* .container {
 	margin-top: 20px;
 } */
@@ -87,8 +108,87 @@
 }
 
 .detailPage{
-	margin-top: 96px;
+	margin-top: 11px;
 }
 
+.detailPage h3{
+	font-family: Nunito,serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #151515;
+    margin-bottom: 15px;
+}
+
+.tabs-book{
+	border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+}
+
+.tabs-book a {
+	flex: 0 0 auto;
+    font-family: Nunito,serif;
+    font-size: 15px;
+    font-weight: 700;
+    /* color: #6d6d6d; */
+    margin-left: 20px;
+}
+
+.active{
+	color: #0060ae;
+}
+
+.card-format{
+	/* position: absolute; */
+    /* left: 0%;
+	width: 100%;
+    font-family: Nunito,serif;
+    padding: 20px;
+	font-size: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(229 229 229 / 80%); */
+
+	border: 1px solid #0060ae;
+	margin: 5px 10px 5px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(229 229 229 / 80%);
+
+	width: 190px;
+    height: 106px;
+}
+
+.card-text-format{
+	text-transform: uppercase;
+    font-family: Nunito,serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #151515;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.card-text-start {
+	font-family: Nunito,serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #6d6d6d;
+    text-align: left;
+	margin-top: -19px;
+}
+.card-text-prices {
+	font-family: Nunito,serif;
+    color: #0060ae;
+    text-align: left;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 20px;
+}
 
 /* END FOR DETAIL PAGE */

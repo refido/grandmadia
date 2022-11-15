@@ -37,13 +37,23 @@ const DetailPage = () => {
 
 						<div className="grid grid-rows-1 grid-flow-col gap-4 ">
 							<div className="row-span-8">
+								<h4>{detail.author}</h4>
 								<h2>{detail.title}</h2>
-								{/* <hr></hr> */}
-								<h4>Description</h4>
+                <div className="tabs-book">
+                  <a className="active">Pilih Format Buku</a>
+                  <a>Deskripsi Buku</a>
+                  <a>Detail Buku</a>
+                </div>
+                <div className="card-format col-10">
+									<p className="card-text-format">SOFT COVER</p>
+									<p className="card-text-start">mulai dari</p>
+									<p className="card-text-prices">{`Rp. ` + detail.newPrice}</p>
+								</div>
+								<h3 className="title-desc">Deskripsi Buku</h3>
 								<p className="desc">{detail.description}</p>
 							</div>
 							<div className="detailPage">
-								<h4>Detail</h4>
+								<h3>Detail</h3>
 								<table class="table table-borderless">
 									<thead>
 										<tr>
@@ -73,8 +83,8 @@ const DetailPage = () => {
 											<td>{detail.panjang}</td>
 										</tr>
 										<tr>
-											<td>Bahasa</td>
-											<td>Panjang</td>
+											<th>Bahasa</th>
+											<th>Panjang</th>
 										</tr>
 										<tr>
 											<td>{detail.bahasa}</td>
@@ -85,19 +95,17 @@ const DetailPage = () => {
 							</div>
 						</div>
 
-						{/* <div className="grid grid-rows-1 grid-flow-col gap-4 ">
+						<div className="grid grid-rows-1 grid-flow-col gap-4 ">
 							<div className="row-span-2">
-								<div className="card-body  col-10 border border-dark">
-									<h5 className="card-title"> Information </h5>
-									<p className="card-text">{detail.information}</p>
+								<div className="card-body  col-10">
+									{/* <h5 className="card-title"> Information </h5> */}
+									<p className="card-text">Mohon pilih format terlebih dahulu</p>
 								</div>
 							</div>
-						</div> */}
+						</div>
 					</div>
 
 					{/* end grid 3 */}
-
-					{/* start grid 5 */}
 					<div className="recomendation">
 						<Recomendation />
 					</div>
