@@ -104,7 +104,7 @@ const DetailPage = () => {
 						</div>
 					</div>
 
-					{/* end grid 3 */}
+					
 					<div className="recomendation">
 						<Recomendation />
 					</div>
