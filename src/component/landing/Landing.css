@@ -14,8 +14,10 @@
 
 /* section-navbar */
 
-.helper {
+.helper a {
 	font-size: 14px;
+	text-decoration: none;
+	color: #000;
 }
 
 nav {

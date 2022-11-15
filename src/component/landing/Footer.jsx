@@ -58,7 +58,7 @@ const Footer = () => {
 							<span>Download aplikasi Grandemedia.com yang tersedia di seluruh perangkat iOS dan Android</span>
 							<div className="row download-icon">
 								<div className="col-6">
-									<a className="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.gramedia.retail&pli=1">
+									<a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.gramedia.retail&pli=1">
 										<img src={Icon_playstore} alt="Play Store"></img>
 									</a>
 								</div>
