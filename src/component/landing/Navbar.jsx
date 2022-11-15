@@ -45,7 +45,7 @@ const Navbar = () => {
 						<div className="navbar-buttons">
 							<ul className="navbar-nav me-auto mb-2 mb-lg-0">
 								<li className="nav-item me-5">
-									<Link to ={`login`}>
+									<Link to={`login`} style={{ textDecoration: "none" }}>
 										<div className="nav-link login-button">Masuk</div>
 									</Link>
 								</li>

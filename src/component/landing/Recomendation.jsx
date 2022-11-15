@@ -34,21 +34,21 @@ const Recomendation = () => {
 			<div className="row book-list mt-3">
 				{books.slice(0, 5).map((book) => (
 					<div className="col-2 mb-3" key={book.id}>
-						<div className="book-item">
-							<div className="book-cover">
-								<img src={Cover_28} alt="Book Cover"></img>
-							</div>
-							<div className="book-identity">
-								<p className="author p-0 mb-1">{book.author}</p>
-								<p className="title p-0 m-0">{book.title}</p>
-								<div>
-								<Link to ={`detail/${book.id}`} key={book.id}>
-								<p className="price p-0 m-0">Rp {book.newPrice.toLocaleString().replace(",", ".")}</p>
-								</Link>
+						<Link to={`detail/${book.id}`} key={book.id} style={{ textDecoration: "none" }}>
+							<div className="book-item">
+								<div className="book-cover">
+									<img src={book.cover} alt="Book Cover"></img>
 								</div>
-								<p className="original-price p-0 m-0">Rp {book.oldPrice.toLocaleString().replace(",", ".")}</p>
+								<div className="book-identity">
+									<p className="author p-0 mb-1">{book.author}</p>
+									<p className="title p-0 m-0">{book.title}</p>
+									<div>
+										<p className="price p-0 m-0">Rp {book.newPrice.toLocaleString().replace(",", ".")}</p>
+									</div>
+									<p className="original-price p-0 m-0">Rp {book.oldPrice.toLocaleString().replace(",", ".")}</p>
+								</div>
 							</div>
-						</div>
+						</Link>
 					</div>
 				))}
 

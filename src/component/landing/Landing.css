@@ -114,8 +114,28 @@ nav img {
 	height: 374px;
 }
 
+.carousel-1 img {
+	height: 374px;
+	margin: 0 auto;
+	border-radius: 4px;
+	background-color: #efefef;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
 .promo-item {
-	background-color: lightgrey;
+	width: 388px;
+	height: 180px;
+	border-radius: 4px;
+	background-color: #fff;
+}
+
+.promo-item img {
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	border-radius: 4px;
 	height: 180px;
 }
 
@@ -164,9 +184,10 @@ nav img {
 }
 
 .book-list .book-item .book-identity .price {
-	color: blue;
+	color: #0060ae;
 	font-size: 18px;
 	font-weight: 600;
+	text-decoration: none;
 }
 
 .book-list .book-item .book-identity .original-price {
