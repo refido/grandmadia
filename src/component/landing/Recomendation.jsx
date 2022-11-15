@@ -8,7 +8,6 @@ import "./Landing.css";
 
 const Recomendation = () => {
 	const { books, isLoading, error } = useSelector((state) => state.books);
-
 	const dispatch = useDispatch();
 
 	useEffect(() => {
