@@ -31,7 +31,7 @@ const Recomendation = () => {
 		<div className="section-recomendation container my-5">
 			<h2>Rekomendasi Gramedia Untukmu</h2>
 			<div className="row book-list mt-3">
-				{books.slice(0, 5).map((book) => (
+				{books.slice(0, 6).map((book) => (
 					<div className="col-2 mb-3" key={book.id}>
 						<Link to={`detail/${book.id}`} key={book.id} style={{ textDecoration: "none" }}>
 							<div className="book-item">
@@ -50,59 +50,6 @@ const Recomendation = () => {
 						</Link>
 					</div>
 				))}
-
-				<div className="col-2">
-					<div className="book-item">
-						<div className="book-cover">
-							<img src={Cover_28} alt=""></img>
-						</div>
-						<div className="book-identity">
-							<p className="author p-0 mb-1">Author</p>
-							<p className="title p-0 m-0">Title</p>
-							<p className="price p-0 m-0">Rp.000</p>
-							<p className="original-price p-0 m-0">Rp.000</p>
-						</div>
-					</div>
-				</div>
-				<div className="col-2">
-					<div className="book-item">
-						<div className="book-cover">
-							<img src={Cover_28} alt=""></img>
-						</div>
-						<div className="book-identity">
-							<p className="author p-0 mb-1">Author</p>
-							<p className="title p-0 m-0">Title</p>
-							<p className="price p-0 m-0">Rp.000</p>
-							<p className="original-price p-0 m-0">Rp.000</p>
-						</div>
-					</div>
-				</div>
-				<div className="col-2">
-					<div className="book-item">
-						<div className="book-cover">
-							<img src={Cover_28} alt=""></img>
-						</div>
-						<div className="book-identity">
-							<p className="author p-0 mb-1">Author</p>
-							<p className="title p-0 m-0">Title</p>
-							<p className="price p-0 m-0">Rp.000</p>
-							<p className="original-price p-0 m-0">Rp.000</p>
-						</div>
-					</div>
-				</div>
-				<div className="col-2">
-					<div className="book-item">
-						<div className="book-cover">
-							<img src={Cover_28} alt=""></img>
-						</div>
-						<div className="book-identity">
-							<p className="author p-0 mb-1">Author</p>
-							<p className="title p-0 m-0">Title</p>
-							<p className="price p-0 m-0">Rp.000</p>
-							<p className="original-price p-0 m-0">Rp.000</p>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	);
