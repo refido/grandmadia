@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import CartPage from './page/CartPage'
 import DetailPage from './page/DetailPage'
 import LandingPage from './page/LandingPage'
 import LoginPage from './page/LoginPage'
@@ -13,6 +14,7 @@ const App = () => {
         <Route exact path='/detail/:id' element={<DetailPage />} />
         <Route exact path='/login/' element={<LoginPage />} />
         <Route exact path='/register/' element={<RegisterPage />} />
+        <Route exact path='/cart/' element={<CartPage />} />
       </Routes>
     </BrowserRouter >
   )

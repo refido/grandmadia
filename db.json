@@ -1,39 +1,46 @@
 {
-	"books": [
-		{
-			"id": 1,
-			"title": "You Do You",
-			"author": "Fellexandro Ruby",
-			"cover": "https://cdn.gramedia.com/uploads/items/9786020649344_YOU_DO_YOU_RUBY_C_1_4-1.jpg",
-			"newPrice": 96000,
-			"oldPrice": 128000,
-			"category": "Buku Pilihan",
-			"storeName": "Matraman",
-			"storeLocation": "Jakarta",
-			"description": "lgbdsgbjsbgjfsgbjbflgbdsgbjsbgjbgjfsgbjbf",
-			"information": "hihihsbdasbfjkdbfjdbklgbdsgbjsbgjfsgbjbfjihssssss"
-		},
-		{
-			"id": 2,
-			"title": "Laut Bercerita",
-			"author": "Leila S. Chudori",
-			"cover": "https://cdn.gramedia.com/uploads/items/9786024246945_Laut-Bercerita.jpg",
-			"newPrice": 75000,
-			"oldPrice": 100000,
-			"storeName": "Matraman",
-			"storeLocation": "Jakarta",
-			"description": "hihihsbdasbfjkdbfjdbklgbdsgbfjkdrsbgrbgittibh",
-			"information": "hahaha"
-		}
-	],
-	"comments": [
-		{
-			"id": 1,
-			"body": "some comment",
-			"postId": 1
-		}
-	],
-	"profile": {
-		"name": "typicode"
-	}
+  "books": [
+    {
+      "id": 1,
+      "title": "You Do You",
+      "author": "Fellexandro Ruby",
+      "cover": "https://cdn.gramedia.com/uploads/items/9786020649344_YOU_DO_YOU_RUBY_C_1_4-1.jpg",
+      "newPrice": 96000,
+      "oldPrice": 128000,
+      "category": "Buku Pilihan",
+      "storeName": "Matraman",
+      "storeLocation": "Jakarta",
+      "description": "lgbdsgbjsbgjfsgbjbflgbdsgbjsbgjbgjfsgbjbf",
+      "information": "hihihsbdasbfjkdbfjdbklgbdsgbjsbgjfsgbjbfjihssssss"
+    },
+    {
+      "id": 2,
+      "title": "Laut Bercerita",
+      "author": "Leila S. Chudori",
+      "cover": "https://cdn.gramedia.com/uploads/items/9786024246945_Laut-Bercerita.jpg",
+      "newPrice": 75000,
+      "oldPrice": 100000,
+      "storeName": "Matraman",
+      "storeLocation": "Jakarta",
+      "description": "hihihsbdasbfjkdbfjdbklgbdsgbfjkdrsbgrbgittibh",
+      "information": "hahaha"
+    }
+  ],
+  "accounts": [
+    {
+      "id": 1,
+      "name": "slayer",
+      "email": "slayer@gmail.com",
+      "password": "sparta"
+    },
+    {
+      "name": "a",
+      "email": "a",
+      "password": "a",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
