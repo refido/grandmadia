@@ -18,7 +18,7 @@
 			"penerbit": "Elex Media Komputindo",
 			"berat": "0.15 kg",
 			"lebar": "17.0 cm",
-			"panjang": "22.0cm",
+			"panjang": "22.0 cm",
 			"information": "ini adalah informasi terbaru dari buku ini anda bisa lihat disini silakan anad abaca dengan teliti apa isi dari informasi ini terimakaish."
 		},
 		{
@@ -123,7 +123,7 @@
 			"penerbit": "Bhuana Ilmu Populer",
 			"berat": "0.64 kg",
 			"lebar": "17.0 cm",
-			"panjang": "22.0cm",
+			"panjang": "22.0 cm",
 			"information": "ini adalah informasi terbaru dari buku ini anda bisa lihat disini silakan anad abaca dengan teliti apa isi dari informasi ini terimakaish."
 		},
     {
@@ -144,7 +144,7 @@
 			"penerbit": "Bhuana Ilmu Populer",
 			"berat": "0.15 kg",
 			"lebar": "17.0 cm",
-			"panjang": "22.0cm",
+			"panjang": "22.0 cm",
 			"information": "ini adalah informasi terbaru dari buku ini anda bisa lihat disini silakan anad abaca dengan teliti apa isi dari informasi ini terimakaish."
 		},
     {
@@ -165,7 +165,7 @@
 			"penerbit": "Bhuana Ilmu Populer",
 			"berat": "0.4 kg",
 			"lebar": "21.0 cm",
-			"panjang": "27.0cm",
+			"panjang": "27.0 cm",
 			"information": "ini adalah informasi terbaru dari buku ini anda bisa lihat disini silakan anad abaca dengan teliti apa isi dari informasi ini terimakaish."
 		},
     {
@@ -186,7 +186,7 @@
 			"penerbit": "Bhuana Ilmu Populer",
 			"berat": "0.4 kg",
 			"lebar": "14.0 cm",
-			"panjang": "21.0cm",
+			"panjang": "21.0 cm",
 			"information": "ini adalah informasi terbaru dari buku ini anda bisa lihat disini silakan anad abaca dengan teliti apa isi dari informasi ini terimakaish."
 		},
    		{
@@ -207,7 +207,7 @@
 			"penerbit": "Bhuana Ilmu Populer",
 			"berat": "0.4 kg",
 			"lebar": "14.0 cm",
-			"panjang": "21.0cm",
+			"panjang": "21.0 cm",
 			"information": "ini adalah informasi terbaru dari buku ini anda bisa lihat disini silakan anad abaca dengan teliti apa isi dari informasi ini terimakaish."
 		},
 		{
@@ -228,7 +228,7 @@
 			"penerbit": " ramedia Pustaka Utama",
 			"berat": "0.4 kg",
 			"lebar": "14.0 cm",
-			"panjang": "21.0cm",
+			"panjang": "21.0 cm",
 			"information": "ini adalah informasi terbaru dari buku ini anda bisa lihat disini silakan anad abaca dengan teliti apa isi dari informasi ini terimakaish."
 		},
 		{
@@ -249,7 +249,7 @@
 			"penerbit": " ramedia Pustaka Utama",
 			"berat": "0.4 kg",
 			"lebar": "17.0 cm",
-			"panjang": "18.0cm",
+			"panjang": "18.0 cm",
 			"information": "ini adalah informasi terbaru dari buku ini anda bisa lihat disini silakan anad abaca dengan teliti apa isi dari informasi ini terimakaish."
 		},
 		{
@@ -270,7 +270,7 @@
 			"penerbit": "m&c!",
 			"berat": "0.4 kg",
 			"lebar": "19.0 cm",
-			"panjang": "20.0cm",
+			"panjang": "20.0 cm",
 			"information": "ini adalah informasi terbaru dari buku ini anda bisa lihat disini silakan anad abaca dengan teliti apa isi dari informasi ini terimakaish."
 		},
 		{
@@ -291,7 +291,7 @@
 			"penerbit": "Gramedia Pustaka Utama",
 			"berat": "0.4 kg",
 			"lebar": "25.0 cm",
-			"panjang": "20.0cm",
+			"panjang": "20.0 cm",
 			"information": "ini adalah informasi terbaru dari buku ini anda bisa lihat disini silakan anad abaca dengan teliti apa isi dari informasi ini terimakaish."
 		},
 		{
@@ -312,7 +312,112 @@
 			"penerbit": "Gramedia Pustaka Utama",
 			"berat": "0.4 kg",
 			"lebar": "25.0 cm",
-			"panjang": "20.0cm",
+			"panjang": "20.0 cm",
+			"information": "ini adalah informasi terbaru dari buku ini anda bisa lihat disini silakan anad abaca dengan teliti apa isi dari informasi ini terimakaish."
+		},
+		{
+			"id": 16,
+			"title": "Metode Penelitian Kualitatif dan Kuantitatif",
+			"author": "Prof. Dr. Endang Komara, M.Si., Dr. Erliany Syaodih, M.Pd., Dr. Rian Andriani, M.M.",
+			"cover": "https://cdn.gramedia.com/uploads/items/9786236232637-Metode_Penelitian_Kualitatif.jpg",
+			"newPrice": 75000,
+			"oldPrice": 0,
+			"category": "Ebook",
+			"storeName": "Matraman",
+			"storeLocation": "Jakarta",
+			"description": "Metode penelitian adalah langkah-langkah yang diambil oleh peneliti untuk mengumpulkan data atau informasi untuk diolah dan dianalisis secara ilmiah. Metode penelitian di antaranya metode kualitatif, metode kuantitatif, dan metode campuran. Metode kualitatif digunakan untuk meneliti suatu objek dengan peneliti berperan sebagai instrumen kunci. Data dikumpulkan melalui teknik triangulasi (gabungan), kemudian dianalisis secara induktif atau kualitatif. Hasil penelitian kualitatif lebih menekankan pada makna. Metode kuantitatif digunakan untuk meneliti populasi atau sampel. Data dikumpulkan dengan menggunakan instrumen atau alat ukur, kemudian dianalisis dengan statistik atau secara kuantitatif. Hasil penelitian kuantitatif berupa hipotesis dan instrumen, statistik dan hipotesis. Metode campuran merupakan pendekatan penelitian yang mengombinasikan atau mengasosiasikan bentuk kualitatif dan bentuk kuantitatif. Untuk lebih jelasnya, para pembaca bisa membaca buku Metode Penelitian Kualitatif dan Kuantitatif ini secara menyeluruh, cermat, dan komprehensif.",
+			"jumlahHalaman": "216",
+			"tanggalTerbit": "9 Nov 2022",
+			"isbn": "9786236232637",
+			"bahasa": "Indonesia",
+			"penerbit": "Pt. Refika Aditama",
+			"berat": "0.34 kg",
+			"lebar": "17.5 cm",
+			"panjang": "25.0 cm",
+			"information": "ini adalah informasi terbaru dari buku ini anda bisa lihat disini silakan anad abaca dengan teliti apa isi dari informasi ini terimakaish."
+		},
+		{
+			"id": 17,
+			"title": "Pengantar Metodologi Penelitian",
+			"author": "Dr. Kasmir, S.E., M.M.",
+			"cover": "https://cdn.gramedia.com/uploads/items/9786233724647-pengantar_metodologi_penelitian.jpg",
+			"newPrice": 125000,
+			"oldPrice": 0,
+			"category": "Ebook",
+			"storeName": "Maaf, toko tidak ditemukan",
+			"storeLocation": "",
+			"description": "Dalam praktiknya untuk menulis atau menyusun karya tulis terutama dalam bentuk skripsi untuk calon sarjana dan tesis untuk calon magister sering kali mengalami hambatan, bahkan sering kali pula waktu yang diberikan untuk menyusun skripsi dan tesis melebihi target yang telah ditetapkan, sehingga mahasiswa tersebut terlambat dalam menyelesaikan kuliahnya. Pada hal skripsi dan tesis merupakan syarat akhir untuk memperoleh gelar sarjana ataupun magister di perguruan tinggi. Pada dasarnya dalam menyusun atau menulis skripsi dan tesis tidaklah sesulit dari apa yang dibayangkan selama mahasiswa tersebut benar-benar memahami tata cara menulis, meneliti, dan memahami metodologi penelitian tersebut secara benar. Kendala mahasiswa yang sering ditemukan penulis adalah kurang memahami apa itu masalah penelitian dan penyebab masalah. Kemudian kendala lainnya adalah kesulitan mencari data masalah yang akan diteliti (khususnya untuk penelitian kuantitatif). Padahal ini merupakan faktor utama yang harus ada dalam latar belakang masalah. Kendala selanjutnya adalah kesulitan dalam membuat kerangka berpikir, pengembangan hipotesis penentuan populasi dan sampel, serta kesulitan dalam menentukan dimensi, indikator serta menyusun kuesioner penelitian. Buku ini memberikan kemudahan kepada mahasiswa dalam menulis skripsi dan tesis serta membimbing mahasiswa untuk mengatasi kendala-kendala di atas. Oleh karena itu, diharapkan dengan membaca buku ini mahasiswa menjadi mudah untuk menyusun dan menulis skripsi dan tesis khususnya untuk penelitian kuantitatif di bidang Manajemen Sumber Daya Manusia, Manajemen Pemasaran, Manajemen Keuangan, Akuntansi dan Bisnis.",
+			"jumlahHalaman": "354",
+			"tanggalTerbit": "3 Nov 2022",
+			"isbn": "9786233724647",
+			"bahasa": "Indonesia",
+			"penerbit": "RajaGrafindo Persada",
+			"berat": "0.395 kg",
+			"lebar": "15.0 cm",
+			"panjang": "23.0 cm",
+			"information": "ini adalah informasi terbaru dari buku ini anda bisa lihat disini silakan anad abaca dengan teliti apa isi dari informasi ini terimakaish."
+		},
+		{
+			"id": 18,
+			"title": "Persepsi, Sikap, Dan Prasangka Dalam Komunikasi Antarbudaya",
+			"author": "Prof. Dr. Alo Liliweri, M.S.",
+			"cover": "https://cdn.gramedia.com/uploads/items/Persepsi_Sikap_Dan_Prasangka_Dalam_Komunikasi_Antarbudaya.jpg",
+			"newPrice": 119000,
+			"oldPrice": 0,
+			"category": "Ebook",
+			"storeName": "Matraman",
+			"storeLocation": "Jakarta",
+			"description": "",
+			"jumlahHalaman": "302",
+			"tanggalTerbit": "2 Nov 2022",
+			"isbn": "9786233723510",
+			"bahasa": "Indonesia",
+			"penerbit": "RajaGrafindo Persada",
+			"berat": "0.335 kg",
+			"lebar": "15.0 cm",
+			"panjang": "23.0 cm",
+			"information": "ini adalah informasi terbaru dari buku ini anda bisa lihat disini silakan anad abaca dengan teliti apa isi dari informasi ini terimakaish."
+		},
+		{
+			"id": 19,
+			"title": "Sustainable Environmental Management",
+			"author": "Jatna Supriatna And Ralph Lenz",
+			"cover": "https://cdn.gramedia.com/uploads/items/Sustainable_Environmental_Management__Lessons_from_Indonesia.jpg",
+			"newPrice": 290000,
+			"oldPrice": 0,
+			"category": "Ebook",
+			"storeName": "Matraman",
+			"storeLocation": "Jakarta",
+			"description": "",
+			"jumlahHalaman": "618",
+			"tanggalTerbit": "31 Okt 2022",
+			"isbn": "9786233211680",
+			"bahasa": "English",
+			"penerbit": "Yayasan Pustaka Obor Indonesia",
+			"berat": "0.74 kg",
+			"lebar": "16.0 cm",
+			"panjang": "24.0 cm",
+			"information": "ini adalah informasi terbaru dari buku ini anda bisa lihat disini silakan anad abaca dengan teliti apa isi dari informasi ini terimakaish."
+		},
+		{
+			"id": 20,
+			"title": "Prinsip Dan Dasar Pemetaan",
+			"author": "Endang Surjati",
+			"cover": "https://cdn.gramedia.com/uploads/items/Prinsip_Dan_Dasar_Pemetaan.jpg",
+			"newPrice": 39000,
+			"oldPrice": 0,
+			"category": "Ebook",
+			"storeName": "Matraman",
+			"storeLocation": "Jakarta",
+			"description": "",
+			"jumlahHalaman": "84",
+			"tanggalTerbit": "28 Okt 2022",
+			"isbn": "9786230129513",
+			"bahasa": "Indonesia",
+			"penerbit": "Penerbit Andi",
+			"berat": "0.14 kg",
+			"lebar": "15.5 cm",
+			"panjang": "23.0 cm",
 			"information": "ini adalah informasi terbaru dari buku ini anda bisa lihat disini silakan anad abaca dengan teliti apa isi dari informasi ini terimakaish."
 		}
 	],
