@@ -85,14 +85,14 @@ const DetailPage = () => {
 							</div>
 						</div>
 
-						<div className="grid grid-rows-1 grid-flow-col gap-4 ">
+						{/* <div className="grid grid-rows-1 grid-flow-col gap-4 ">
 							<div className="row-span-2">
 								<div className="card-body  col-10 border border-dark">
 									<h5 className="card-title"> Information </h5>
 									<p className="card-text">{detail.information}</p>
 								</div>
 							</div>
-						</div>
+						</div> */}
 					</div>
 
 					{/* end grid 3 */}
