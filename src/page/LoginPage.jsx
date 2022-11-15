@@ -4,8 +4,8 @@ import Content from "../component/login/Content";
 const LoginPage = () => {
   return (
     <div>
-      <Navbar/>
-      <Content/>
+      <Navbar />
+      <Content />
     </div>
   );
 };
