@@ -30,7 +30,7 @@ const DetailPage = () => {
 						<div className="grid grid-rows-1 grid-flow-col gap-4">
 							<div className="row-span-4">
 								<div className="card main-card">
-									<img className="card-img-top" src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//94/MTA-28352263/no_brand_novel_tere_liye_bedebah_di_ujung_tanduk_full01_emvp6a1.jpg"></img>
+									<img className="card-img-top" src={detail.cover}></img>
 								</div>
 							</div>
 						</div>
@@ -53,24 +53,32 @@ const DetailPage = () => {
 									</thead>
 									<tbody>
 										<tr>
-											<td>Otto</td>
-											<td>{detail.author}</td>
+											<td>{detail.jumlahHalaman}</td>
+											<td>{detail.penerbit}</td>
 										</tr>
 										<tr>
 											<th>Tanggal Terbit</th>
 											<th>Berat</th>
 										</tr>
 										<tr>
-											<td>ISBN</td>
-											<td>Lebar</td>
+											<td>{detail.tanggalTerbit}</td>
+											<td>{detail.berat}</td>
 										</tr>
 										<tr>
 											<th>ISBN</th>
 											<th>Lebar</th>
 										</tr>
 										<tr>
+											<td>{detail.isbn}</td>
+											<td>{detail.panjang}</td>
+										</tr>
+										<tr>
 											<td>Bahasa</td>
 											<td>Panjang</td>
+										</tr>
+										<tr>
+											<td>{detail.bahasa}</td>
+											<td>{detail.panjang}</td>
 										</tr>
 									</tbody>
 								</table>
