@@ -6,6 +6,8 @@ import Category from "../component/landing/Category";
 import Recomendation from "../component/landing/Recomendation";
 import Footer from "../component/landing/Footer";
 import Popular from "../component/landing/Popular";
+import BestSelling from "../component/landing/BestSelling";
+import Vendor from "../component/landing/Vendor";
 
 const LandingPage = () => {
 	return (
@@ -15,6 +17,8 @@ const LandingPage = () => {
 			<Category />
 			<Recomendation />
 			<Popular />
+			<BestSelling />
+			<Vendor />
 			<Footer />
 		</div>
 	);

@@ -8,71 +8,77 @@ const Popular = () => {
 		<div className="section-popular container my-5">
 			<h2>Buku-Buku Terpopuler</h2>
 			<div className="row book-list mt-3">
-				<div className="col-2 banner">
-					<img src={Banner} alt=""></img>
-				</div>
-				<div className="col-2">
-					<div className="book-item">
-						<div className="book-cover">
-							<img src={Cover_28} alt=""></img>
-						</div>
-						<div className="book-identity">
-							<p className="author p-0 mb-1">Author</p>
-							<p className="title p-0 m-0">Title</p>
-							<p className="price p-0 m-0">Rp.000</p>
-							<p className="original-price p-0 m-0">Rp.000</p>
-						</div>
+				<div className="col-3">
+					<div class="banner">
+						<img src={Banner} alt=""></img>
 					</div>
 				</div>
-				<div className="col-2">
-					<div className="book-item">
-						<div className="book-cover">
-							<img src={Cover_28} alt=""></img>
+				<div className="col-9">
+					<div className="row">
+						<div class="col">
+							<div class="book-item">
+								<div class="book-cover">
+									<img src={Cover_28} alt=""></img>
+								</div>
+								<div class="book-identity">
+									<p class="author p-0 mb-1">Author</p>
+									<p class="title p-0 m-0">Title</p>
+									<p class="price p-0 m-0">Rp.000</p>
+									<p class="original-price p-0 m-0">Rp.000</p>
+								</div>
+							</div>
 						</div>
-						<div className="book-identity">
-							<p className="author p-0 mb-1">Author</p>
-							<p className="title p-0 m-0">Title</p>
-							<p className="price p-0 m-0">Rp.000</p>
-							<p className="original-price p-0 m-0">Rp.000</p>
+						<div class="col">
+							<div class="book-item">
+								<div class="book-cover">
+									<img src={Cover_28} alt=""></img>
+								</div>
+								<div class="book-identity">
+									<p class="author p-0 mb-1">Author</p>
+									<p class="title p-0 m-0">Title</p>
+									<p class="price p-0 m-0">Rp.000</p>
+									<p class="original-price p-0 m-0">Rp.000</p>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div className="col-2">
-					<div className="book-item">
-						<div className="book-cover">
-							<img src={Cover_28} alt=""></img>
+						<div class="col">
+							<div class="book-item">
+								<div class="book-cover">
+									<img src={Cover_28} alt=""></img>
+								</div>
+								<div class="book-identity">
+									<p class="author p-0 mb-1">Author</p>
+									<p class="title p-0 m-0">Title</p>
+									<p class="price p-0 m-0">Rp.000</p>
+									<p class="original-price p-0 m-0">Rp.000</p>
+								</div>
+							</div>
 						</div>
-						<div className="book-identity">
-							<p className="author p-0 mb-1">Author</p>
-							<p className="title p-0 m-0">Title</p>
-							<p className="price p-0 m-0">Rp.000</p>
-							<p className="original-price p-0 m-0">Rp.000</p>
+						<div class="col">
+							<div class="book-item">
+								<div class="book-cover">
+									<img src={Cover_28} alt=""></img>
+								</div>
+								<div class="book-identity">
+									<p class="author p-0 mb-1">Author</p>
+									<p class="title p-0 m-0">Title</p>
+									<p class="price p-0 m-0">Rp.000</p>
+									<p class="original-price p-0 m-0">Rp.000</p>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div className="col-2">
-					<div className="book-item">
-						<div className="book-cover">
-							<img src={Cover_28} alt=""></img>
-						</div>
-						<div className="book-identity">
-							<p className="author p-0 mb-1">Author</p>
-							<p className="title p-0 m-0">Title</p>
-							<p className="price p-0 m-0">Rp.000</p>
-							<p className="original-price p-0 m-0">Rp.000</p>
-						</div>
-					</div>
-				</div>
-				<div className="col-2">
-					<div className="book-item">
-						<div className="book-cover">
-							<img src={Cover_28} alt=""></img>
-						</div>
-						<div className="book-identity">
-							<p className="author p-0 mb-1">Author</p>
-							<p className="title p-0 m-0">Title</p>
-							<p className="price p-0 m-0">Rp.000</p>
-							<p className="original-price p-0 m-0">Rp.000</p>
+						<div class="col">
+							<div class="book-item">
+								<div class="book-cover">
+									<img src={Cover_28} alt=""></img>
+								</div>
+								<div class="book-identity">
+									<p class="author p-0 mb-1">Author</p>
+									<p class="title p-0 m-0">Title</p>
+									<p class="price p-0 m-0">Rp.000</p>
+									<p class="original-price p-0 m-0">Rp.000</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
