@@ -16,17 +16,21 @@ const Navbar = () => {
 	return (
 		<div className="section-navbar fixed-top">
 			<div className="helper">
-				<div className="container text-end">
-					<img className="m-0 pb-1 " src={Icon_helper} alt="" width="18px"></img>
-					Bantuan
-				</div>
+				<a target="_blank" rel="noreferrer" href="https://www.gramedia.com/help">
+					<div className="container text-end">
+						<img className="m-0 pb-1 " src={Icon_helper} alt="" width="18px"></img>
+						Bantuan
+					</div>
+				</a>
 			</div>
 			<nav className="navbar navbar-expand-lg bg-white">
 				<div className="container">
 					<div className="navbar-brand p-0">
-						<a className="navbar-brand" href="index.html">
-							<img src={Icon_grandemedia} alt=""></img>
-						</a>
+						<Link to={`/`} style={{ textDecoration: "none" }}>
+							<div className="navbar-brand">
+								<img src={Icon_grandemedia} alt=""></img>
+							</div>
+						</Link>
 					</div>
 					<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span className="navbar-toggler-icon"></span>
