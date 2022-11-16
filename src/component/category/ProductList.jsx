@@ -94,23 +94,10 @@ const ProductList = () => {
 											</div>
 										);
 									} else {
+										// return <div className="">No books available</div>;
 										return null;
 									}
 								})}
-
-								<div className="col-3 mb-4">
-									<div className="book-item">
-										<div className="book-cover">
-											<img src={Cover_28} alt=""></img>
-										</div>
-										<div className="book-identity">
-											<p className="author p-0 mb-1">Author</p>
-											<p className="title p-0 m-0">Title</p>
-											<p className="price p-0 m-0">Rp.000</p>
-											<p className="original-price p-0 m-0">Rp.000</p>
-										</div>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
