@@ -19,7 +19,7 @@ const Category = () => {
 				<div className="col-6">
 					<div className="row">
 						<div className="col-3">
-							<Link to={`category`} style={{ textDecoration: "none" }}>
+							<Link to={`category/Buku-Baru-Andalan`} style={{ textDecoration: "none" }}>
 								<div className="icon text-center">
 									<img src={Icon_category_Buku_Baru} alt=""></img>
 									<p className="text-center">Buku Baru Andalan</p>
