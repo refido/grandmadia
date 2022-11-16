@@ -27,7 +27,7 @@ const DetailPage = () => {
 	const navigate=useNavigate()
 	const createOrder = async () => {
 		try {
-			await axios.post('http://localhost:3001/orders', { title:detail.title, weight:detail.berat, price:detail.newPrice, cover:detail.cover })
+			await axios.post('http://localhost:3001/orders', { title:detail.title, weight:detail.berat, price:detail.newPrice, cover:detail.cover, count:1 })
 			navigate('/cart')
 		} catch (e) {
 			console.log(e)
