@@ -6,12 +6,14 @@ import DetailPage from './page/DetailPage'
 import LandingPage from './page/LandingPage'
 import LoginPage from './page/LoginPage'
 import RegisterPage from './page/RegisterPage'
+import SearchPage from './page/SearchPage'
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route exact path='/' element={<LandingPage />} />
+        <Route exact path='/search' element={<SearchPage />} />
         <Route exact path='/detail/:id' element={<DetailPage />} />
         <Route exact path='/category/:category' element={<CategoryPage />} />
         <Route exact path='/login/' element={<LoginPage />} />

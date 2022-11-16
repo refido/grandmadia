@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 import Icon_helper from "../../asset/landing/icon_helper.png";
 import Icon_grandemedia from "../../asset/landing/icon_grandemedia.jpg";
 import Icon_cart from "../../asset/landing/icon_cart.png";
 
 import "./Landing.css";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
 	const [Input, setInput] = useState("");
@@ -14,9 +14,10 @@ const Navbar = () => {
 		setInput(event.target.value);
 	};
 
+	let navigate = useNavigate();
 	const submitHandler = (event) => {
 		event.preventDefault();
-		alert(Input);
+		navigate("/search", { state: { query: Input } });
 	};
 
 	const [isActive, setActive] = useState(false);
