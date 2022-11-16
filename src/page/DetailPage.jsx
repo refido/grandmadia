@@ -1,6 +1,5 @@
 import "../component/detail/Detail.css";
 import Navbar from "../component/landing/Navbar";
-import Header from "../component/landing/Header";
 import Footer from "../component/landing/Footer";
 import Recomendation from "../component/landing/Recomendation";
 import { useState, useEffect } from "react";
@@ -39,12 +38,12 @@ const DetailPage = () => {
 							<div className="row-span-8">
 								<h4>{detail.author}</h4>
 								<h2>{detail.title}</h2>
-                <div className="tabs-book">
-                  <a className="active">Pilih Format Buku</a>
-                  <a>Deskripsi Buku</a>
-                  <a>Detail Buku</a>
-                </div>
-                <div className="card-format col-10">
+								<div className="tabs-book">
+									<a className="active">Pilih Format Buku</a>
+									<a>Deskripsi Buku</a>
+									<a>Detail Buku</a>
+								</div>
+								<div className="card-format col-10">
 									<p className="card-text-format">SOFT COVER</p>
 									<p className="card-text-start">mulai dari</p>
 									<p className="card-text-prices">{`Rp. ` + detail.newPrice}</p>

@@ -8,8 +8,8 @@ import "./Category.css";
 const ProductList = () => {
 	const { books, isLoading, error } = useSelector((state) => state.books);
 	const dispatch = useDispatch();
-	const {category} = useParams();
-	const bookCategory = category.replaceAll('-',' ')
+	const { category } = useParams();
+	const bookCategory = category.replaceAll("-", " ");
 	useEffect(() => {
 		dispatch(__getBooks());
 	}, [category]);
@@ -19,7 +19,6 @@ const ProductList = () => {
 	}
 
 	if (error) {
-		//if error exists
 		return (
 			<div className="section-recomendation container my-5">
 				<h1>Error in requesting data...</h1>
@@ -93,9 +92,9 @@ const ProductList = () => {
 													</div>
 												</div>
 											</div>
-										)
-									}else{
-										return null
+										);
+									} else {
+										return null;
 									}
 								})}
 

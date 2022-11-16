@@ -27,7 +27,7 @@ const Category = () => {
 							</Link>
 						</div>
 						<div className="col-3">
-							<Link to={`category`} style={{ textDecoration: "none" }}>
+							<Link to={`category/buku pilihan`} style={{ textDecoration: "none" }}>
 								<div className="icon text-center">
 									<img src={Icon_category_Buku_Pilihan} alt=""></img>
 									<p className="text-center">Buku Pilihan</p>
@@ -35,7 +35,7 @@ const Category = () => {
 							</Link>
 						</div>
 						<div className="col-3">
-							<Link to={`category`} style={{ textDecoration: "none" }}>
+							<Link to={`category/buku import`} style={{ textDecoration: "none" }}>
 								<div className="icon text-center">
 									<img src={Icon_category_Buku_Import} alt=""></img>
 									<p className="text-center">Buku Import</p>
@@ -43,7 +43,7 @@ const Category = () => {
 							</Link>
 						</div>
 						<div className="col-3">
-							<Link to={`category`} style={{ textDecoration: "none" }}>
+							<Link to={`/`} style={{ textDecoration: "none" }}>
 								<div className="icon text-center">
 									<img src={Icon_category_ebook} alt=""></img>
 									<p className="text-center">E-Book & Paket Premium</p>
@@ -55,7 +55,7 @@ const Category = () => {
 				<div className="col-6">
 					<div className="row">
 						<div className="col-3">
-							<Link to={`category`} style={{ textDecoration: "none" }}>
+							<Link to={`/`} style={{ textDecoration: "none" }}>
 								<div className="icon text-center">
 									<img src={Icon_category_Voucher_Gramedia_Academy_2} alt=""></img>
 									<p className="text-center">Gramedia Academy</p>
@@ -63,7 +63,7 @@ const Category = () => {
 							</Link>
 						</div>
 						<div className="col-3">
-							<Link to={`category`} style={{ textDecoration: "none" }}>
+							<Link to={`/`} style={{ textDecoration: "none" }}>
 								<div className="icon text-center">
 									<img src={Icon_category_Print_on_Demand} alt=""></img>
 									<p className="text-center">Print On Demand</p>
@@ -71,7 +71,7 @@ const Category = () => {
 							</Link>
 						</div>
 						<div className="col-3">
-							<Link to={`category`} style={{ textDecoration: "none" }}>
+							<Link to={`/`} style={{ textDecoration: "none" }}>
 								<div className="icon text-center">
 									<img src={Icon_category_alat_tulis} alt=""></img>
 									<p className="text-center">Stationery</p>
@@ -79,7 +79,7 @@ const Category = () => {
 							</Link>
 						</div>
 						<div className="col-3">
-							<Link to={`category`} style={{ textDecoration: "none" }}>
+							<Link to={`/`} style={{ textDecoration: "none" }}>
 								<div className="icon text-center">
 									<img src={Icon_category_Mainan} alt=""></img>
 									<p className="text-center">Mainan</p>

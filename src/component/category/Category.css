@@ -17,6 +17,7 @@
 	font-weight: 700;
 	font-size: 24px;
 	margin-bottom: 8px;
+	text-transform: capitalize;
 }
 
 .section-product .title-wrapper .date-title {
@@ -112,32 +113,65 @@ select:hover {
 .book-list .book-item {
 	padding: 15px;
 	height: 350px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .book-item img {
 	width: 100%;
+	height: 175px;
+	margin-bottom: 15px;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: center;
+	object-position: center;
 }
 
 .book-list .book-item .book-identity .author {
-	color: gray;
 	font-size: 12px;
+	color: #6d6d6d;
+	margin-bottom: 5px;
+	text-overflow: ellipsis !important;
+	display: -webkit-box !important;
+	-webkit-line-clamp: 1 !important;
+	-webkit-box-orient: vertical;
+	overflow: hidden !important;
+	word-wrap: break-word;
+	line-height: 150%;
+	width: 100%;
 }
 
 .book-list .book-item .book-identity .title {
-	color: #000;
-	font-size: 16px;
+	font-size: 14px;
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	margin-bottom: 5px;
+	line-height: 150%;
+	letter-spacing: normal;
+	color: #151515;
+	text-overflow: ellipsis !important;
+	display: -webkit-box !important;
+	-webkit-line-clamp: 2 !important;
+	-webkit-box-orient: vertical;
+	overflow: hidden !important;
+	word-wrap: break-word;
+	text-align: left;
+	width: 100%;
 }
 
 .book-list .book-item .book-identity .price {
-	color: blue;
-	font-size: 18px;
-	font-weight: 600;
+	color: #0060ae;
+	font-weight: 700;
+	font-size: 16px;
+	margin-bottom: 5px;
 }
 
 .book-list .book-item .book-identity .original-price {
-	color: gray;
-	font-size: 14px;
+	font-size: 12px;
+	color: #6d6d6d;
 	text-decoration: line-through;
+	margin-bottom: 2px;
 	font-style: italic;
 }
