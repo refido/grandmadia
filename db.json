@@ -438,13 +438,5 @@
   "profile": {
     "name": "typicode"
   },
-  "orders": [
-    {
-      "title": "Moriarty the Patriot 2",
-      "weight": "0.12 kg",
-      "price": 21000,
-      "cover": "https://cdn.gramedia.com/uploads/items/9786020485454memoarty2.jpg",
-      "id": 1
-    }
-  ]
+  "orders": []
 }
