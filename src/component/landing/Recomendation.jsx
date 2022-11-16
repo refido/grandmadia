@@ -9,6 +9,8 @@ const Recomendation = () => {
 	const { books, isLoading, error } = useSelector((state) => state.books);
 	const dispatch = useDispatch();
 
+	console.log(books);
+
 	useEffect(() => {
 		dispatch(__getBooks());
 	}, []);
@@ -18,7 +20,6 @@ const Recomendation = () => {
 	}
 
 	if (error) {
-		//if error exists
 		return (
 			<div className="section-recomendation container my-5">
 				<h1>Error in requesting data...</h1>

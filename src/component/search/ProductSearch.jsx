@@ -1,17 +1,19 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { __getBooks } from "../../redux/modules/slice";
-import "./Category.css";
+import "./Search.css";
 
-const ProductList = () => {
+const ProductSearch = () => {
 	const { books, isLoading, error } = useSelector((state) => state.books);
 	const dispatch = useDispatch();
-	const { category } = useParams();
-	const bookCategory = category.replaceAll("-", " ");
+	const { state } = useLocation();
+	const { query } = state;
+	// const query =  {location.state.query}
+
 	useEffect(() => {
 		dispatch(__getBooks());
-	}, [category]);
+	}, []);
 
 	if (isLoading) {
 		return <h1>Loading</h1>;
@@ -27,9 +29,7 @@ const ProductList = () => {
 	return (
 		<div className="section-product container">
 			<div className="title-wrapper text-center">
-				<h2>{bookCategory}</h2>
-				<p className="date-title">Periode</p>
-				<p className="date-range">30 Juni 2021 - 31 Desember 2022</p>
+				<h2>Search "{query}"</h2>
 			</div>
 			<div className="product-container mt-5">
 				<div className="row">
@@ -63,7 +63,7 @@ const ProductList = () => {
 						<div className="product-list">
 							<div className="product-sorter d-flex justify-content-between">
 								<p className="d-inline">
-									<strong>1-20</strong> dari hasil pencarian produk dengan kata kunci <strong>""</strong>
+									<strong>1-20</strong> dari hasil pencarian produk dengan kata kunci <strong>"{query}"</strong>
 								</p>
 								<select name="menu" id="meun-items">
 									<option disabled selected>
@@ -75,8 +75,9 @@ const ProductList = () => {
 								</select>
 							</div>
 							<div className="row book-list mt-5">
-								{books.map((book) => {
-									if (book.category == bookCategory && books.length > 0) {
+								{books
+									.filter((book) => book.title.toLowerCase().includes(query))
+									.map((book) => {
 										return (
 											<div className="col-3 mb-4" key={book.id}>
 												<div className="book-item">
@@ -92,10 +93,7 @@ const ProductList = () => {
 												</div>
 											</div>
 										);
-									} else if (!book.category == bookCategory) {
-										return <div className="">No books available</div>;
-									}
-								})}
+									})}
 							</div>
 						</div>
 					</div>
@@ -105,4 +103,4 @@ const ProductList = () => {
 	);
 };
 
-export default ProductList;
+export default ProductSearch;
