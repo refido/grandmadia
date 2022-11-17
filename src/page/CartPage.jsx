@@ -21,21 +21,39 @@ const CartPage = () => {
             getOrders() // refresh
         }
     }
+    const increaseOrder = (x, y) => async () => {
+        await axios.patch(
+            `http://localhost:3001/orders/${x}`,
+            { count: y + 1 }
+        )
+        getOrders()
+    }
+    const decreaseOrder = (x, y) => async () => {
+        if (y != 1) {
+            await axios.patch(
+                `http://localhost:3001/orders/${x}`,
+                { count: y - 1 }
+            )
+            getOrders()
+        } else {
+            return
+        }
+    }
     return (
         <div>
             <h4>Tas Belanja</h4>
             <div>
-                {orders.map((order) => (
+                {orders.map((order, index) => (
                     <div key={order.id}>
                         <img src={order.cover}></img>
                         <p>{order.title}</p>
                         <p>{order.weight}</p>
                         <p>Rp {order.price}</p>
-                        <button>-</button>
-                        <span>count</span>
-                        <button>+</button>
+                        <button onClick={decreaseOrder(order.id, order.count)}>-</button>
+                        <span>{order.count}</span>
+                        <button onClick={increaseOrder(order.id, order.count)}>+</button>
                         <button onClick={deleteOrder(order.id)}>Hapus</button>
-                        <p>Total Pesanan {order.index} : </p>
+                        <p>Total Pesanan {index + 1} : {order.price * order.count}</p>
                     </div>
                 ))}
             </div>
