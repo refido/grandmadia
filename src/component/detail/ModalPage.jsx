@@ -17,7 +17,7 @@ const ModalPage = () => {
   
     return (
       <>
-        <MDBBtn onClick={toggleShow}>Vertically centered modal</MDBBtn>
+        <MDBBtn onClick={toggleShow}>Cek detail</MDBBtn>
   
         <MDBModal tabIndex='-1' show={centredModal} setShow={setCentredModal}>
           <MDBModalDialog centered>
