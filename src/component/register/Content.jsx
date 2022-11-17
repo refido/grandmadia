@@ -3,7 +3,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Icon_facebook from "../../asset/login/Facebook_icon.svg.png";
 import Icon_google from "../../asset/login/Google__G__Logo.svg.png";
-import Icon_myvalue from "../../asset/login/myvalue.png";
 
 const Content = () => {
     const navigate = useNavigate()
@@ -78,16 +77,7 @@ const Content = () => {
                         <label class="form-check-label" for="flexCheckDefault">
                             Dengan pembuatan akun, Anda menyetujui <u>Syarat & Ketentuan</u> serta <u>Kebijakan Privasi</u> Gramedia.com
                         </label>
-                    </div>
-                    {/* <div class="list-group mx-0 w-auto">
-                        <label class="list-group-item d-flex gap-2">
-                            <input class="form-check-input" type="checkbox">
-                                <span>
-                                    Dengan pembuatan akun, Anda menyetujui Syarat & Ketentuan serta Kebijakan Privasi Gramedia.com
-                                </span>
-                            </input>
-                        </label>
-                    </div> */}
+                    </div>            
                     <button type="button" class="btn btn-light w-100 mb-4 text-primary" onClick={handleRegister}>Daftar</button>
                     <p>Sudah Mendaftar? <a href="/login">Masuk</a></p>
                 </div>

@@ -433,6 +433,12 @@
       "email": "a",
       "password": "a",
       "id": 2
+    },
+    {
+      "name": "lucas",
+      "email": "lucas@mail.com",
+      "password": "12345",
+      "id": 3
     }
   ],
   "profile": {
