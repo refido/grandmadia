@@ -5,8 +5,8 @@ import Recomendation from "../component/landing/Recomendation";
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import Modal from "../component/detail/Modal";
-import Popup from 'reactjs-popup';
+import ModalPage from "../component/detail/ModalPage";
+// import Popup from 'reactjs-popup';
 
 const DetailPage = () => {
 	const [detail, setDetail] = useState({});
@@ -64,10 +64,9 @@ const DetailPage = () => {
 								<div className="card-format col-10" onClick={handleClick}>
 									<p className="card-text-format">SOFT COVER</p>
 									<p className="card-text-start">mulai dari</p>
-									<Popup modal trigger={<p className="card-text-prices">{`Rp ` + detail.newPrice}</p>}> 
-									modal
-									</Popup>
+									<p className="card-text-prices">{`Rp ` + detail.newPrice}</p>
 								</div>
+									<ModalPage />
 								{/* </Link> */}
 
 								<h3 className="title-desc">Deskripsi Buku</h3>
