@@ -16,6 +16,7 @@ const App = () => {
         <Route exact path='/search' element={<SearchPage />} />
         <Route exact path='/detail/:id' element={<DetailPage />} />
         <Route exact path='/category/:category' element={<CategoryPage />} />
+        <Route exact path='/category/:category/detail/:id' element={<DetailPage />} />
         <Route exact path='/login/' element={<LoginPage />} />
         <Route exact path='/register/' element={<RegisterPage />} />
         <Route exact path='/cart/' element={<CartPage />} />
