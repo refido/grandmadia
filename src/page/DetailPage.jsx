@@ -13,7 +13,7 @@ const DetailPage = () => {
 	const { id } = useParams();
 
 	const getPost = async () => {
-		const { data } = await axios.get(`http://localhost:3001/books/${id}`);
+		const { data } = await axios.get(`https://grandemedia-clone-server.herokuapp.com/books/${id}`);
 		setDetail(data);
 	};
 
@@ -22,18 +22,17 @@ const DetailPage = () => {
 	}, [id]);
 
 	const handleClick = () => {
-        createOrder()
-	}
-	const navigate=useNavigate()
+		createOrder();
+	};
+	const navigate = useNavigate();
 	const createOrder = async () => {
 		try {
-			await axios.post('http://localhost:3001/orders', { title:detail.title, weight:detail.berat, price:detail.newPrice, cover:detail.cover, count:1 })
-			navigate('/cart')
+			await axios.post("https://grandemedia-clone-server.herokuapp.com/orders", { title: detail.title, weight: detail.berat, price: detail.newPrice, cover: detail.cover, count: 1 });
+			navigate("/cart");
 		} catch (e) {
-			console.log(e)
+			console.log(e);
 		}
-	}
-
+	};
 
 	return (
 		<div className="containerDetail">
@@ -66,7 +65,7 @@ const DetailPage = () => {
 									<p className="card-text-start">mulai dari</p>
 									<p className="card-text-prices">{`Rp ` + detail.newPrice}</p>
 								</div>
-									<ModalPage />
+								<ModalPage />
 								{/* </Link> */}
 
 								<h3 className="title-desc">Deskripsi Buku</h3>
@@ -124,7 +123,6 @@ const DetailPage = () => {
 						</div>
 					</div>
 
-					
 					<div className="recomendation">
 						<Recomendation />
 					</div>
