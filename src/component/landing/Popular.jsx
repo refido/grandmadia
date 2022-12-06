@@ -12,7 +12,7 @@ const Popular = () => {
 	useEffect(() => {
 		dispatch(__getBooks());
 		console.log('getsbook');
-	},);
+	},[]);
 
 	if (isLoading) {
 		return <h1>Loading</h1>;
