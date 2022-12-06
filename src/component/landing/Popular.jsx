@@ -11,7 +11,8 @@ const Popular = () => {
 
 	useEffect(() => {
 		dispatch(__getBooks());
-	}, []);
+		console.log('getsbook');
+	},);
 
 	if (isLoading) {
 		return <h1>Loading</h1>;
@@ -30,7 +31,7 @@ const Popular = () => {
 			<h2>Buku-Buku Terpopuler</h2>
 			<div className="row book-list mt-3">
 				<div className="col-3">
-					<div class="banner">
+					<div className="banner">
 						<img src={Banner} alt=""></img>
 					</div>
 				</div>

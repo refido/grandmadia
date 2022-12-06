@@ -94,12 +94,12 @@ const Navbar = () => {
 							</ul>
 						</div>
 						<div className="col-9">
-							<div class="row">
-								<div class="col-6 category-item">Pertanian</div>
-								<div class="col-6 category-item">Seni & Desain</div>
-								<div class="col-6 category-item">Bisnis & Ekonomi</div>
-								<div class="col-6 category-item">Anak-anak</div>
-								<div class="col-6 category-item">Komik</div>
+							<div className="row">
+								<div className="col-6 category-item">Pertanian</div>
+								<div className="col-6 category-item">Seni & Desain</div>
+								<div className="col-6 category-item">Bisnis & Ekonomi</div>
+								<div className="col-6 category-item">Anak-anak</div>
+								<div className="col-6 category-item">Komik</div>
 							</div>
 						</div>
 					</div>

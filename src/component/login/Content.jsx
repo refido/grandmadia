@@ -35,18 +35,18 @@ const Content = () => {
 			<div className="row">
 				<h1 className="text-primary">Masuk</h1>
 				<div className="col-5 text-center">
-					<div class="form-floating mb-3">
-						<input type="email" class="form-control" id="floatingInput" placeholder="Email" value={email} onChange={handleChangeEmail}></input>
+					<div className="form-floating mb-3">
+						<input type="email" className="form-control" id="floatingInput" placeholder="Email" value={email} onChange={handleChangeEmail}></input>
 						<label for="floatingInput">Email</label>
 					</div>
-					<div class="form-floating mb-4">
-						<input type="password" class="form-control" id="floatingPassword" placeholder="Password" value={password} onChange={handleChangePassword}></input>
+					<div className="form-floating mb-4">
+						<input type="password" className="form-control" id="floatingPassword" placeholder="Password" value={password} onChange={handleChangePassword}></input>
 						<label for="floatingPassword">Password</label>
 					</div>
-					<div class="form-floating mb-4">
+					<div className="form-floating mb-4">
 						<a href="/">Lupa kata sandi?</a>
 					</div>
-					<button type="button" class="btn btn-light w-100 mb-4 text-primary" onClick={handleLogin}>
+					<button type="button" className="btn btn-light w-100 mb-4 text-primary" onClick={handleLogin}>
 						Masuk
 					</button>
 					<p>
@@ -54,17 +54,17 @@ const Content = () => {
 					</p>
 				</div>
 				<div className="col-2 text-center" style={{ width: "55px", marginLeft: "50px", marginRight: "50px", color: "GrayText" }}>
-					<div class="vr" style={{ height: "150px" }}></div>
+					<div className="vr" style={{ height: "150px" }}></div>
 					atau
-					<div class="vr" style={{ height: "150px" }}></div>
+					<div className="vr" style={{ height: "150px" }}></div>
 				</div>
 				<div className="col-5 text-center">
 					<div>
-						<button type="button" class="btn border border-dark w-100 mb-4 text-primary">
+						<button type="button" className="btn border border-dark w-100 mb-4 text-primary">
 							<img src={Icon_facebook} alt="" style={{ width: "30px", height: "30px", marginRight: "10px" }}></img>
 							Masuk dengan Facebook
 						</button>
-						<button type="button" class="btn border border-dark w-100 mb-4 text-primary">
+						<button type="button" className="btn border border-dark w-100 mb-4 text-primary">
 							<img src={Icon_google} alt="" style={{ width: "30px", height: "30px", marginRight: "10px" }}></img>
 							Masuk dengan Google
 						</button>
@@ -75,7 +75,7 @@ const Content = () => {
 						</div>
 					</div>
 					<div>
-						<button type="button" class="btn border border-dark w-100 mb-4 text-primary">
+						<button type="button" className="btn border border-dark w-100 mb-4 text-primary">
 							<img src={Icon_myvalue} alt="" style={{ width: "30px", height: "30px", marginRight: "10px" }}></img>
 							Masuk dengan MyValue
 						</button>
