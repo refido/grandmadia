@@ -9,12 +9,12 @@ const Recomendation = () => {
 	const { books, isLoading, error } = useSelector((state) => state.books);
 	const dispatch = useDispatch();
 
-	console.log(books['data'],'tes');
+	// console.log(books['data'], 'tes');
 
 	useEffect(() => {
 		dispatch(__getBooks());
-		console.log('getsbooks');
-	},[]);
+		// console.log('getsbooks');
+	}, []);
 
 	if (isLoading) {
 		return <h1>Loading</h1>;
@@ -28,16 +28,15 @@ const Recomendation = () => {
 		);
 	}
 
-	
-	 console.log(books,'mk');
+	// console.log(books, 'mk');
 
 	return (
 		<div className="section-recomendation container my-5">
 			<h2>Rekomendasi Gramedia Untukmu</h2>
 			<div className="row book-list mt-3">
-				{books.slice(0,6).map((book) => (
-					<div className="col-2 mb-3" key={book.id}>
-						<Link to={`detail/${book.id}`} key={book.id} style={{ textDecoration: "none" }}>
+				{books.slice(0, 6).map((book) => (
+					<div className="col-2 mb-3" key={book._id}>
+						<Link to={`detail/${book._id}`} key={book._id} style={{ textDecoration: "none" }}>
 							<div className="book-item">
 								<div className="book-cover">
 									<img src={book.cover} alt="Book Cover"></img>
@@ -46,9 +45,8 @@ const Recomendation = () => {
 									<p className="author p-0 mb-1">{book.author}</p>
 									<p className="title p-0 m-0">{book.title}</p>
 									<div>
-										<p className="price p-0 m-0">Rp {book.newPrice.toLocaleString().replace(",", ".")}</p>
+										<p className="price p-0 m-0">Rp {book.price}</p>
 									</div>
-									<p className="original-price p-0 m-0">Rp {book.oldPrice.toLocaleString().replace(",", ".")}</p>
 								</div>
 							</div>
 						</Link>
