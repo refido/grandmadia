@@ -49,10 +49,10 @@
 }
 
 .card-body {
-	width: 100%;
+	width: 70%;
     font-family: Nunito,serif;
     padding: 20px;
-    margin-left: 10px;
+    margin-left: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(229 229 229 / 80%);
 }
@@ -61,8 +61,9 @@
 	margin-bottom: 5px;
     word-wrap: break-word;
 	color: #0060ae;
-	font-size: 25px;
+	font-size: 16px;
 }
+
 .card {
 	width: 10rem;
 }
@@ -79,13 +80,13 @@
 
 /* .body {
     margin: 0;
-    padding-top: 88px;
+    padding-top: 30px;
     color: #0060ae;
     background: #fff;
 } */
-/* .container {
-	margin-top: 20px;
-} */
+.container {
+	margin-top: 30px;
+}
 
 .recomendation {
 	margin-top: 40px;
@@ -154,31 +155,38 @@
     box-shadow: 0 0 10px rgb(229 229 229 / 80%); */
 
 	border: 1px solid #0060ae;
-	margin: 5px 10px 5px 0;
+	margin: 10px 10px 30px 0;
+    padding: 20px 15px ;
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(229 229 229 / 80%);
 
 	width: 190px;
     height: 106px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .card-text-format{
 	text-transform: uppercase;
     font-family: Nunito,serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 16px;
     color: #151515;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+    margin-top: 20px;
 }
 
 .card-text-start {
 	font-family: Nunito,serif;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 12px;
     color: #6d6d6d;
     text-align: left;
 	margin-top: -19px;
@@ -189,7 +197,112 @@
     text-align: left;
     white-space: nowrap;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 16px;
 }
 
+.modal-button {
+    border: none;
+    background-color: transparent;
+    color: #0060ae;
+}
+
+.formatbuku-text {
+    font-weight: bold;
+    margin: 20px 0px;
+}
+
+.modal-header1 {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px 0;
+}
+
+.top-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-container h5 {
+    font-weight: bold;
+}
+
+.searchbox {
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 30px 0 15px 0;
+}
+
+.searchbox svg {
+    margin: 0px 15px;
+}
+
+.searchbox input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.filter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.filter svg {
+    margin-right: 10px;
+}
+
+.modalcard-body {
+    font-family: Nunito,serif;
+    margin: 10px 10px 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(229 229 229 / 80%);
+    display: flex;
+    flex-direction: row;
+}
+
+.modalcard-body:hover {
+    cursor: pointer;
+}
+
+.card-img-2 {
+    width: 50px;
+    margin: 0px 15px 0px 5px;
+}
+
+.topbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.store-container {
+    margin-right: 10px;
+}
+
+.store-container svg {
+    margin-right: 5px;
+}
+
+.right-modalbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bottombox-container{
+    color: #0060ae;
+    font-weight: bold;
+}
+
+.card-text1 {
+	font-size: 16px;
+}
+
+.card-text2 {
+	font-size: 14px;
+    margin-left: 250px;
+}
 /* END FOR DETAIL PAGE */
