@@ -6,15 +6,36 @@ import Icon_grandemedia from "../../asset/landing/icon_grandemedia.jpg";
 import Icon_cart from "../../asset/landing/icon_cart.png";
 
 import "./Landing.css";
+import { toast, ToastContainer } from "react-toastify";
 
 const Navbar = () => {
   const [Input, setInput] = useState("");
+  const user = localStorage.getItem("userId");
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate("/login");
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("userId");
+    toast.success("Berhasil logout", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+    navigate("/");
+  };
 
   const onInputChange = (event) => {
     setInput(event.target.value);
   };
 
-  let navigate = useNavigate();
   const submitHandler = (event) => {
     event.preventDefault();
     navigate("/search", { state: { query: Input } });
@@ -91,9 +112,13 @@ const Navbar = () => {
             <div className="navbar-buttons">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item me-5">
-                  <Link to={`login`} style={{ textDecoration: "none" }}>
-                    <div className="nav-link login-button">Masuk</div>
-                  </Link>
+                  <div
+                    style={{ textDecoration: "none", cursor: "pointer" }}
+                    className="nav-link login-button"
+                    onClick={() => (!user ? handleLogin() : handleLogout())}
+                  >
+                    {!user ? "Masuk" : "Keluar"}
+                  </div>
                 </li>
                 <li className="nav-item">
                   <a
@@ -132,17 +157,19 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="col-9">
-              <div class="row">
-                <div class="col-6 category-item">Pertanian</div>
-                <div class="col-6 category-item">Seni & Desain</div>
-                <div class="col-6 category-item">Bisnis & Ekonomi</div>
-                <div class="col-6 category-item">Anak-anak</div>
-                <div class="col-6 category-item">Komik</div>
+              <div className="row">
+                <div className="col-6 category-item">Pertanian</div>
+                <div className="col-6 category-item">Seni & Desain</div>
+                <div className="col-6 category-item">Bisnis & Ekonomi</div>
+                <div className="col-6 category-item">Anak-anak</div>
+                <div className="col-6 category-item">Komik</div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <ToastContainer />
     </div>
   );
 };

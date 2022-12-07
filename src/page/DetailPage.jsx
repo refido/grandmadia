@@ -13,14 +13,14 @@ const DetailPage = () => {
 	const { id } = useParams();
 
 	const getPost = async () => {
-		const { data } = await axios.get(`https://grandemedia-clone-server.herokuapp.com/books/${id}`);
+		const { data } = await axios.get(`https://grandmadia-api.azurewebsites.net/books/${id}`);
 		setDetail(data);
 	};
 
 	useEffect(() => {
 		getPost();
-		console.log('getpost');
-	},);
+		// console.log('getpost');
+	}, []);
 
 	const handleClick = () => {
 		createOrder();
@@ -34,6 +34,8 @@ const DetailPage = () => {
 			console.log(e);
 		}
 	};
+
+	console.log(detail, 'mk');
 
 	return (
 		<div className="containerDetail">

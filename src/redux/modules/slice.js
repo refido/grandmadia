@@ -9,8 +9,8 @@ export const __getBooks = createAsyncThunk(
   'getBooks',
   async (payload, thunkAPI) => {
     try {
-      const { data } = await axios.get('http://localhost:3001/books')
-      console.log(data['data']);
+      const { data } = await axios.get('https://grandmadia-api.azurewebsites.net/books')
+      // console.log(data['data'],'data');
       // console.log(data[1]);
       // console.log(data[8]);
       return thunkAPI.fulfillWithValue(data['data'])
@@ -32,7 +32,7 @@ const bookSlice = createSlice({
     [__getBooks.fulfilled]: (state, action) => {
       state.isLoading = false
       state.books = action.payload
-      console.log(action.payload,'kt');
+      // console.log(action.payload,'kt');
       state.error = null
     },
     [__getBooks.rejected]: (state, action) => {
