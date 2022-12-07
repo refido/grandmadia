@@ -9,11 +9,12 @@ const Recomendation = () => {
 	const { books, isLoading, error } = useSelector((state) => state.books);
 	const dispatch = useDispatch();
 
-	console.log(books);
+	console.log(books['data'],'tes');
 
 	useEffect(() => {
 		dispatch(__getBooks());
-	}, []);
+		console.log('getsbooks');
+	},[]);
 
 	if (isLoading) {
 		return <h1>Loading</h1>;
@@ -27,11 +28,14 @@ const Recomendation = () => {
 		);
 	}
 
+	
+	 console.log(books,'mk');
+
 	return (
 		<div className="section-recomendation container my-5">
 			<h2>Rekomendasi Gramedia Untukmu</h2>
 			<div className="row book-list mt-3">
-				{books.slice(0, 6).map((book) => (
+				{books.slice(0,6).map((book) => (
 					<div className="col-2 mb-3" key={book.id}>
 						<Link to={`detail/${book.id}`} key={book.id} style={{ textDecoration: "none" }}>
 							<div className="book-item">

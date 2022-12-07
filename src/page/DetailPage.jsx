@@ -3,7 +3,7 @@ import Navbar from "../component/landing/Navbar";
 import Footer from "../component/landing/Footer";
 import Recomendation from "../component/landing/Recomendation";
 import { useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import ModalPage from "../component/detail/ModalPage";
 // import Popup from 'reactjs-popup';
@@ -19,7 +19,8 @@ const DetailPage = () => {
 
 	useEffect(() => {
 		getPost();
-	}, [id]);
+		console.log('getpost');
+	},);
 
 	const handleClick = () => {
 		createOrder();
@@ -44,7 +45,7 @@ const DetailPage = () => {
 						<div className="grid grid-rows-1 grid-flow-col gap-4">
 							<div className="row-span-4">
 								<div className="card main-card">
-									<img className="card-img-top" src={detail.cover}></img>
+									<img className="card-img-top" alt="" src={detail.cover}></img>
 								</div>
 							</div>
 						</div>
@@ -54,9 +55,9 @@ const DetailPage = () => {
 								<h4>{detail.author}</h4>
 								<h2>{detail.title}</h2>
 								<div className="tabs-book">
-									<a className="active">Pilih Format Buku</a>
-									<a>Deskripsi Buku</a>
-									<a>Detail Buku</a>
+									<a href=" " className="active">Pilih Format Buku</a>
+									<a href=" ">Deskripsi Buku</a>
+									<a href=" ">Detail Buku</a>
 								</div>
 
 								{/* <Link to={'/cart'} style={{ textDecoration: "none" }}> */}
