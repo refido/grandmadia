@@ -8,17 +8,17 @@ import Icon_cart from "../../asset/landing/icon_cart.png";
 import "./Landing.css";
 
 const Navbar = () => {
-	const [Input, setInput] = useState("");
+  const [Input, setInput] = useState("");
 
-	const onInputChange = (event) => {
-		setInput(event.target.value);
-	};
+  const onInputChange = (event) => {
+    setInput(event.target.value);
+  };
 
-	let navigate = useNavigate();
-	const submitHandler = (event) => {
-		event.preventDefault();
-		navigate("/search", { state: { query: Input } });
-	};
+  let navigate = useNavigate();
+  const submitHandler = (event) => {
+    event.preventDefault();
+    navigate("/search", { state: { query: Input } });
+  };
 
   const [isActive, setActive] = useState(false);
   const toggleClass = () => {
