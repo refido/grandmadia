@@ -5,7 +5,6 @@ import Recomendation from "../component/landing/Recomendation";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import ModalPage from "../component/detail/ModalPage";
 // import Popup from 'reactjs-popup';
 
 const DetailPage = () => {
