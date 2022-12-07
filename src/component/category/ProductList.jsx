@@ -47,13 +47,13 @@ const ProductList = () => {
 							<h3>Filter berdasarkan stok</h3>
 							<div className="form-check">
 								<input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></input>
-								<label className="form-check-label" for="flexRadioDefault1">
+								<label className="form-check-label" htmlFor="flexRadioDefault1">
 									Semua
 								</label>
 							</div>
 							<div className="form-check">
 								<input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked></input>
-								<label className="form-check-label" for="flexRadioDefault2">
+								<label className="form-check-label" htmlFor="flexRadioDefault2">
 									Tersedia
 								</label>
 							</div>
@@ -76,10 +76,10 @@ const ProductList = () => {
 							</div>
 							<div className="row book-list mt-5">
 								{books.map((book) => {
-									if (book.category == bookCategory && books.length > 0) {
+									if (book.category === bookCategory && books.length > 0) {
 										return (
-											<div className="col-3 mb-4" key={book.id}>
-												<Link to={`detail/${book.id}`} key={book.id} style={{ textDecoration: "none" }}>
+											<div className="col-3 mb-4" key={book._id}>
+												<Link to={`detail/${book._id}`} key={book._id} style={{ textDecoration: "none" }}>
 													<div className="book-item">
 														<div className="book-cover">
 															<img src={book.cover} alt=""></img>
@@ -87,14 +87,13 @@ const ProductList = () => {
 														<div className="book-identity">
 															<p className="author p-0 mb-1">{book.author}</p>
 															<p className="title p-0 m-0">{book.title}</p>
-															<p className="price p-0 m-0">Rp {book.newPrice.toLocaleString().replace(",", ".")}</p>
-															<p className="original-price p-0 m-0">Rp {book.oldPrice.toLocaleString().replace(",", ".")}</p>
+															<p className="price p-0 m-0">Rp {book.price}</p>
 														</div>
 													</div>
 												</Link>
 											</div>
 										);
-									} else if (!book.category == bookCategory) {
+									} else if (!book.category === bookCategory) {
 										return <div className="">No books available</div>;
 									}
 								})}
