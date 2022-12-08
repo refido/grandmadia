@@ -6,8 +6,8 @@ import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
-import { useDispatch } from "react-redux";
 import StoreList from "../component/detail/storeLlist";
+import { __getDetails } from "../redux/modules/detailSlice";
 
 const DetailPage = () => {
 	const { details: detail, isLoading, error } = useSelector((state) => state.details);
