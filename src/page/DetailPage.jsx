@@ -34,18 +34,6 @@ const DetailPage = () => {
 		);
 	}
 
-	if (isLoading1) {
-		return <h1>Loading</h1>;
-	}
-
-	if (error1) {
-		return (
-			<div className="section-recomendation container my-5">
-				<h1>Error in requesting data...</h1>
-			</div>
-		);
-	}
-
 	const handleClick = () => {
 		createOrder();
 	};
