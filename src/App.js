@@ -18,10 +18,10 @@ const App = () => {
         <Route path="/detail/:id" element={<DetailPage />} />
         <Route path="/category/:category" element={<CategoryPage />} />
         <Route path="/category/:category/detail/:id" element={<DetailPage />} />
-        <Route path="/login/" element={<LoginPage />} />
-        <Route path="/register/" element={<RegisterPage />} />
-        <Route path="/cart/" element={<CartPage />} />
-        <Route path="/checkout/" element={<CheckoutPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
     </BrowserRouter>
   );

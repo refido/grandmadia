@@ -2,25 +2,36 @@ import "../component/detail/Detail.css";
 import Navbar from "../component/landing/Navbar";
 import Footer from "../component/landing/Footer";
 import Recomendation from "../component/landing/Recomendation";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
 import { __getDetails } from "../redux/modules/detailSlice";
 import { __getStores } from "../redux/modules/storeSlice";
+import { __addCartItem } from "../redux/modules/addCartSlice";
 
 const DetailPage = () => {
+	const navigate = useNavigate();
 	const { details: detail, isLoading, error } = useSelector((state) => state.details);
 	const { bookstores, isLoading1, error1 } = useSelector((state) => state.stores);
+	const { message, isLoading2, error2 } = useSelector((state) => state.addCartItems);
+	const [store, setStore] = useState({});
+	const [quantity, setQuantity] = useState(1);
 
 	const dispatch = useDispatch();
-	const navigate = useNavigate();
 	const { id } = useParams();
 
 	useEffect(() => {
 		dispatch(__getDetails(id));
 		dispatch(__getStores(id));
 	}, [dispatch, id]);
+
+	useEffect(() => {
+		if (quantity < 1) {
+			setQuantity(1);
+		} else if (quantity > store.stokBuku) {
+			setQuantity(store.stokBuku)
+		}
+	}, [quantity]);
 
 	if (isLoading) {
 		return <h1>Loading</h1>;
@@ -46,17 +57,27 @@ const DetailPage = () => {
 		);
 	}
 
-	const handleClick = () => {
-		createOrder();
-	};
-	const createOrder = async () => {
-		try {
-			await axios.post("https://grandemedia-clone-server.herokuapp.com/orders", { title: detail.title, weight: detail.berat, price: detail.newPrice, cover: detail.cover, count: 1 });
-			navigate("/cart");
-		} catch (e) {
-			console.log(e);
-		}
-	};
+	// if (isLoading2) {
+	// 	return <h1>Loading</h1>;
+	// }
+
+	// if (error2) {
+	// 	navigate("/login");
+	// }
+
+	const selectStore = (toko) => {
+		document.getElementById("selected-book").style.display = "flex";
+		document.getElementById("default").style.display = "none";
+		setStore(toko);
+		setQuantity(1);
+	}
+
+	const tokobookId = store.tokobookId;
+	const jumlah = quantity;
+
+	const addtoCart = () => {
+		dispatch(__addCartItem({tokobookId, jumlah}))
+	}
 
 	return (
 		<div className="containerDetail">
@@ -124,7 +145,7 @@ const DetailPage = () => {
 											</div>
 											<div className="modal-body">
 												{bookstores.map((toko) => (
-													<div className="modalcard-body" key={toko.tokobookId}>
+													<div className="modalcard-body" key={toko.tokobookId} onClick={() => { selectStore(toko) }} data-bs-dismiss="modal" aria-label="Close">
 														<img className="card-img-2" alt="" src={toko.cover}></img>
 														<div className="right-modalbox">
 															<div className="topbox-container">
@@ -147,8 +168,7 @@ const DetailPage = () => {
 															</div>
 														</div>
 													</div>
-												))
-												}
+												))}
 											</div>
 										</div>
 									</div>
@@ -204,8 +224,35 @@ const DetailPage = () => {
 
 						<div className="grid grid-rows-1 grid-flow-col gap-4 ">
 							<div className="row-span-2">
-								<div className="card-body  col-10">
+								<div className="card-body  col-10" id="default">
 									<p className="card-text">Mohon pilih format terlebih dahulu</p>
+								</div>
+								<div className="card-body cb1 col-10" id="selected-book" style={{ "display": "none" }}>
+									<div className="cb2">Ingin beli berapa?</div>
+									<div className="cb3">Jumlah Barang</div>
+									<div className="cb4">
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0060ae" class="bi bi-dash-circle-fill" viewBox="0 0 16 16" onClick={() => setQuantity(quantity - 1)}>
+											<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z" />
+										</svg>
+										<span>{quantity}</span>
+										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0060ae" className="bi bi-plus-circle-fill" viewBox="0 0 16 16" onClick={() => setQuantity(quantity + 1)}>
+											<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+										</svg>
+									</div>
+									<hr />
+									<div className="cb5">
+										<span style={{ "color": "gray" }}>Subtotal</span>
+										<span style={{ "color": "#0060ae" }}>{`Rp ` + store.price}</span>
+									</div>
+									<div className="btn-container">
+										<button className="btn-cart" onClick={addtoCart}>
+											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0060ae" class="bi bi-handbag" viewBox="0 0 16 16">
+												<path d="M8 1a2 2 0 0 1 2 2v2H6V3a2 2 0 0 1 2-2zm3 4V3a3 3 0 1 0-6 0v2H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5H11zm-1 1v1.5a.5.5 0 0 0 1 0V6h1.639a.5.5 0 0 1 .494.426l1.028 6.851A1.5 1.5 0 0 1 12.678 15H3.322a1.5 1.5 0 0 1-1.483-1.723l1.028-6.851A.5.5 0 0 1 3.36 6H5v1.5a.5.5 0 1 0 1 0V6h4z" />
+											</svg>
+											<span>Keranjang</span>
+										</button>
+										<button className="btn-checkout">Beli Sekarang</button>
+									</div>
 								</div>
 							</div>
 						</div>
