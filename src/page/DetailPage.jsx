@@ -6,12 +6,15 @@ import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
-import ModalPage from "../component/detail/ModalPage";
 import { __getDetails } from "../redux/modules/detailSlice";
-// import Popup from 'reactjs-popup';
+import { __getStores } from "../redux/modules/storeSlice";
 
 const DetailPage = () => {
 	const { details: detail, isLoading, error } = useSelector((state) => state.details);
+	const { bookstores, isLoading1, error1 } = useSelector((state) => state.stores);
+	const storesList = bookstores['data'];
+	console.log("STORE LIST: ", storesList)
+	console.log('details', detail)
 
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
@@ -19,14 +22,26 @@ const DetailPage = () => {
 
 	useEffect(() => {
 		dispatch(__getDetails(id));
-		console.log("ngirim id")
-	},[dispatch,id]);
-	
+		dispatch(__getStores(id));
+	}, [dispatch, id]);
+
 	if (isLoading) {
 		return <h1>Loading</h1>;
 	}
 
 	if (error) {
+		return (
+			<div className="section-recomendation container my-5">
+				<h1>Error in requesting data...</h1>
+			</div>
+		);
+	}
+
+	if (isLoading1) {
+		return <h1>Loading</h1>;
+	}
+
+	if (error1) {
 		return (
 			<div className="section-recomendation container my-5">
 				<h1>Error in requesting data...</h1>
@@ -81,9 +96,10 @@ const DetailPage = () => {
 										</div>
 										<button className="modal-button" data-bs-toggle="modal" data-bs-target="#TokoModal">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down" viewBox="0 0 16 16">
-												<path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+												<path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
 											</svg>
 										</button>
+										{/* <StoreList /> */}
 									</div>
 								</div>
 
@@ -111,52 +127,31 @@ const DetailPage = () => {
 												</div>
 											</div>
 											<div className="modal-body">
-												<div className="modalcard-body" onClick={handleClick}>
-													<img className="card-img-2" alt="" src={detail.cover}></img>
-													<div className="right-modalbox">
-														<div className="topbox-container">
-															<div className="store-container">
-																<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#a5b9ca" className="bi bi-shop" viewBox="0 0 16 16">
-																	<path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
-																</svg>
-																<span>{detail.storeName}</span>
+												{storesList.map((toko) => (
+													<div className="modalcard-body" /* onClick={handleClick} */ key={toko.tokobookId}>
+														<img className="card-img-2" alt="" src={toko.cover}></img>
+														<div className="right-modalbox">
+															<div className="topbox-container">
+																<div className="store-container">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#a5b9ca" className="bi bi-shop" viewBox="0 0 16 16">
+																		<path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
+																	</svg>
+																	<span>{toko.storeName}</span>
+																</div>
+																<div className="store-container">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#a5b9ca" className="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+																		<path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+																	</svg>
+																	<span>{toko.storeLocation}</span>
+																</div>
 															</div>
-															<div className="store-container">
-																<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#a5b9ca" className="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-																	<path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-																</svg>
-																<span>{detail.storeLocation}</span>
+															<div className="bottombox-container">
+																<div className="card-text1">{`Rp ` + toko.price}</div>
+																<div className="card-text2">{toko.stok}</div>
 															</div>
-														</div>
-														<div className="bottombox-container">
-															<div className="card-text1">{`Rp ` + detail.price}</div>
-															<div className="card-text2">{detail.stok}</div>
 														</div>
 													</div>
-												</div>
-												<div className="modalcard-body" onClick={handleClick}>
-													<img className="card-img-2" alt="" src="https://cdn.gramedia.com/uploads/items/9786020523316_Melangkah_UV_Spot_R4-1__w82_hauto.jpg"></img>
-													<div className="right-modalbox">
-														<div className="topbox-container">
-															<div className="store-container">
-																<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#a5b9ca" className="bi bi-shop" viewBox="0 0 16 16">
-																	<path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z" />
-																</svg>
-																<span>Matraman</span>
-															</div>
-															<div className="store-container">
-																<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#a5b9ca" className="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-																	<path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-																</svg>
-																<span>Jakarta Timur</span>
-															</div>
-														</div>
-														<div className="bottombox-container">
-															<div className="card-text1">Rp 32.000</div>
-															<div className="card-text2">Stok Tersedia</div>
-														</div>
-													</div>
-												</div>
+												))}
 											</div>
 										</div>
 									</div>
@@ -208,7 +203,7 @@ const DetailPage = () => {
 									</tbody>
 								</table>
 							</div>
-						</div>
+						</div >
 
 						<div className="grid grid-rows-1 grid-flow-col gap-4 ">
 							<div className="row-span-2">
@@ -217,15 +212,15 @@ const DetailPage = () => {
 								</div>
 							</div>
 						</div>
-					</div>
+					</div >
 
 					<div className="recomendation">
 						<Recomendation />
 					</div>
-				</div>
-			</div>
+				</div >
+			</div >
 			<Footer />
-		</div>
+		</div >
 	);
 };
 

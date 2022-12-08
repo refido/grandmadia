@@ -280,6 +280,7 @@
 
 .store-container {
     margin-right: 10px;
+    font-size: 14px;
 }
 
 .store-container svg {
@@ -298,11 +299,10 @@
 }
 
 .card-text1 {
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .card-text2 {
-	font-size: 14px;
-    margin-left: 250px;
+	font-size: 12px;
 }
 /* END FOR DETAIL PAGE */
