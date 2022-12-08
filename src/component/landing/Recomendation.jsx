@@ -14,7 +14,7 @@ const Recomendation = () => {
 	useEffect(() => {
 		dispatch(__getBooks());
 		// console.log('getsbooks');
-	}, []);
+	}, [dispatch]);
 
 	if (isLoading) {
 		return <h1>Loading</h1>;
@@ -27,8 +27,6 @@ const Recomendation = () => {
 			</div>
 		);
 	}
-
-	// console.log(books, 'mk');
 
 	return (
 		<div className="section-recomendation container my-5">

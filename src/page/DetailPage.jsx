@@ -2,29 +2,41 @@ import "../component/detail/Detail.css";
 import Navbar from "../component/landing/Navbar";
 import Footer from "../component/landing/Footer";
 import Recomendation from "../component/landing/Recomendation";
-import { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
+import ModalPage from "../component/detail/ModalPage";
+import { __getDetails } from "../redux/modules/detailSlice";
 // import Popup from 'reactjs-popup';
 
 const DetailPage = () => {
-	const [detail, setDetail] = useState({});
+	const { details: detail, isLoading, error } = useSelector((state) => state.details);
+
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
 	const { id } = useParams();
 
-	const getPost = async () => {
-		const { data } = await axios.get(`https://grandmadia-api.azurewebsites.net/books/${id}`);
-		setDetail(data);
-	};
-
 	useEffect(() => {
-		getPost();
-		// console.log('getpost');
-	}, []);
+		dispatch(__getDetails(id));
+		console.log("ngirim id")
+	},[dispatch,id]);
+	
+	if (isLoading) {
+		return <h1>Loading</h1>;
+	}
+
+	if (error) {
+		return (
+			<div className="section-recomendation container my-5">
+				<h1>Error in requesting data...</h1>
+			</div>
+		);
+	}
 
 	const handleClick = () => {
 		createOrder();
 	};
-	const navigate = useNavigate();
 	const createOrder = async () => {
 		try {
 			await axios.post("https://grandemedia-clone-server.herokuapp.com/orders", { title: detail.title, weight: detail.berat, price: detail.newPrice, cover: detail.cover, count: 1 });
@@ -33,8 +45,6 @@ const DetailPage = () => {
 			console.log(e);
 		}
 	};
-
-	console.log(detail, 'mk');
 
 	return (
 		<div className="containerDetail">
