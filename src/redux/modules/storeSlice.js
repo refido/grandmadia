@@ -3,8 +3,8 @@ import axios from "axios";
 
 const initialState = {
     bookstores: [],
-    isLoading: false,
-    error: null
+    isLoading1: false,
+    error1: null
 };
 
 export const __getStores = createAsyncThunk (
@@ -22,20 +22,21 @@ export const __getStores = createAsyncThunk (
 export const storesSlice = createSlice ({
     name: "bookstores",
     initialState,
-    reducers: {
+    reducers: {},
+    extraReducers: {
         [__getStores.pending]: (state) => {
-            state.isLoading = true;
+            state.isLoading1 = true;
         },
         [__getStores.fulfilled]: (state, action) => {
-            state.isLoading = false;
+            state.isLoading1 = false;
             state.bookstores = action.payload;
+            state.error1 = null;
         },
         [__getStores.rejected]: (state, action) => {
-            state.isLoading = false;
-            state.error = action.payload;
+            state.isLoading1 = false;
+            state.error1 = action.payload;
         }
-    },
-    extraReducers: {}
+    }
 });
 
 export default storesSlice.reducer;
