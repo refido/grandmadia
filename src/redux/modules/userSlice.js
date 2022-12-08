@@ -6,8 +6,8 @@ export const loginUser = createAsyncThunk(
   async ({ email, password }, thunkAPI) => {
     try {
       const response = await axios.post(
-        // "https://grandmadia-api.azurewebsites.net/login",
-        "http://localhost:3001/login",
+        "https://grandmadia-api.azurewebsites.net/login",
+        // "http://localhost:3001/login",
         {
           email: email,
           password: password,
