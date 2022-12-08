@@ -52,7 +52,7 @@ const ProductList = () => {
 								</label>
 							</div>
 							<div className="form-check">
-								<input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked></input>
+								<input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"></input>
 								<label className="form-check-label" htmlFor="flexRadioDefault2">
 									Tersedia
 								</label>
@@ -66,9 +66,7 @@ const ProductList = () => {
 									<strong>1-20</strong> dari hasil pencarian produk dengan kata kunci <strong>""</strong>
 								</p>
 								<select name="menu" id="meun-items">
-									<option disabled selected>
-										Terbaru
-									</option>
+									<option value="Terbaru">Terbaru</option>
 									<option value="Terpopuler">Terpopuler</option>
 									<option value="Terendah">Harga Terendah</option>
 									<option value="Tertinggi">Harga Tertinggi</option>
