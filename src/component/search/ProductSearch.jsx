@@ -47,13 +47,13 @@ const ProductSearch = () => {
 							<h3>Filter berdasarkan stok</h3>
 							<div className="form-check">
 								<input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></input>
-								<label className="form-check-label" for="flexRadioDefault1">
+								<label className="form-check-label" htmlFor="flexRadioDefault1">
 									Semua
 								</label>
 							</div>
 							<div className="form-check">
-								<input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked></input>
-								<label className="form-check-label" for="flexRadioDefault2">
+								<input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"></input>
+								<label className="form-check-label" htmlFor="flexRadioDefault2">
 									Tersedia
 								</label>
 							</div>
@@ -66,7 +66,7 @@ const ProductSearch = () => {
 									<strong>1-20</strong> dari hasil pencarian produk dengan kata kunci <strong>"{query}"</strong>
 								</p>
 								<select name="menu" id="meun-items">
-									<option disabled selected>
+									<option disabled>
 										Terbaru
 									</option>
 									<option value="Terpopuler">Terpopuler</option>
@@ -79,7 +79,7 @@ const ProductSearch = () => {
 									.filter((book) => book.title.toLowerCase().includes(query))
 									.map((book) => {
 										return (
-											<div className="col-3 mb-4" key={book.id}>
+											<div className="col-3 mb-4" key={book._id}>
 												<div className="book-item">
 													<div className="book-cover">
 														<img src={book.cover} alt=""></img>
@@ -87,8 +87,7 @@ const ProductSearch = () => {
 													<div className="book-identity">
 														<p className="author p-0 mb-1">{book.author}</p>
 														<p className="title p-0 m-0">{book.title}</p>
-														<p className="price p-0 m-0">Rp {book.newPrice.toLocaleString().replace(",", ".")}</p>
-														<p className="original-price p-0 m-0">Rp {book.oldPrice.toLocaleString().replace(",", ".")}</p>
+														<p className="price p-0 m-0">Rp {book.price}</p>
 													</div>
 												</div>
 											</div>

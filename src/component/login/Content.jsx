@@ -140,11 +140,11 @@ const Content = () => {
             ></input> */}
 
               {errors.email?.message ? (
-                <label for="floatingInputInvalid">
+                <label htmlFor="floatingInputInvalid">
                   {errors.email?.message}
                 </label>
               ) : (
-                <label for="floatingInput">Email</label>
+                <label htmlFor="floatingInput">Email</label>
               )}
             </div>
             {}
@@ -160,11 +160,11 @@ const Content = () => {
                 placeholder="password"
               />
               {errors.email?.message ? (
-                <label for="floatingInputInvalid">
+                <label htmlFor="floatingInputInvalid">
                   {errors.password?.message}
                 </label>
               ) : (
-                <label for="floatingInput">Password</label>
+                <label htmlFor="floatingInput">Password</label>
               )}
             </div>
             <div className="form-floating mb-4">

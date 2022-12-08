@@ -17,9 +17,9 @@ export const __getBooks = createAsyncThunk(
     } catch (e) {
       return thunkAPI.rejectWithValue(e)
     }
-
   }
 )
+
 const bookSlice = createSlice({
   name: 'books',
   initialState,
@@ -32,7 +32,6 @@ const bookSlice = createSlice({
     [__getBooks.fulfilled]: (state, action) => {
       state.isLoading = false
       state.books = action.payload
-      // console.log(action.payload,'kt');
       state.error = null
     },
     [__getBooks.rejected]: (state, action) => {
