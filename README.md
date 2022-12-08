@@ -2,6 +2,29 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Prerequisites
+
+1. Clone this Repo / Pull Main
+2. install node modules
+
+   ```js
+    npm i
+   ```
+
+   and then
+
+   ```js
+    yarn install
+   ```
+
+3. To start
+
+    ```js
+    yarn start
+   ```
+
+If want to add a new dependency please use the npm
+
 ## Available Scripts
 
 In the project directory, you can run:
