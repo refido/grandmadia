@@ -242,7 +242,7 @@ const DetailPage = () => {
 									<hr />
 									<div className="cb5">
 										<span style={{ "color": "gray" }}>Subtotal</span>
-										<span style={{ "color": "#0060ae" }}>{`Rp ` + store.price}</span>
+										<span style={{ "color": "#0060ae" }}>{`Rp ` + store.price * quantity}</span>
 									</div>
 									<div className="btn-container">
 										<button className="btn-cart" onClick={addtoCart}>
