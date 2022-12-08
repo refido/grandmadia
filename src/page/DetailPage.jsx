@@ -12,9 +12,6 @@ import { __getStores } from "../redux/modules/storeSlice";
 const DetailPage = () => {
 	const { details: detail, isLoading, error } = useSelector((state) => state.details);
 	const { bookstores, isLoading1, error1 } = useSelector((state) => state.stores);
-	const storesList = bookstores['data'];
-	console.log("STORE LIST: ", storesList)
-	console.log('details', detail)
 
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
@@ -99,7 +96,6 @@ const DetailPage = () => {
 												<path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
 											</svg>
 										</button>
-										{/* <StoreList /> */}
 									</div>
 								</div>
 
@@ -127,8 +123,8 @@ const DetailPage = () => {
 												</div>
 											</div>
 											<div className="modal-body">
-												{storesList.map((toko) => (
-													<div className="modalcard-body" /* onClick={handleClick} */ key={toko.tokobookId}>
+												{bookstores.map((toko) => (
+													<div className="modalcard-body" key={toko.tokobookId}>
 														<img className="card-img-2" alt="" src={toko.cover}></img>
 														<div className="right-modalbox">
 															<div className="topbox-container">
@@ -151,7 +147,8 @@ const DetailPage = () => {
 															</div>
 														</div>
 													</div>
-												))}
+												))
+												}
 											</div>
 										</div>
 									</div>
