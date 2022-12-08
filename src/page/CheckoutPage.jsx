@@ -71,6 +71,26 @@ const CheckoutPage = () => {
       setQuantity(1);
     }
   }, [quantity]);
+
+  const { checkout, isLoading, error } = useSelector((state) => state.details);
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(__getCheckout());
+	}, [dispatch]);
+
+	if (isLoading) {
+		return <h1>Loading</h1>;
+	}
+
+	if (error) {
+		return (
+			<div className="section-recomendation container my-5">
+				<h1>Error in requesting data...</h1>
+			</div>
+		);
+	}
+
   return (
     <>
       <Navbar />

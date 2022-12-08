@@ -55,7 +55,7 @@ const Navbar = () => {
         >
           <div className="container text-end">
             <img
-              className="m-0 pb-1 "
+              className="m-0 pb-1 my-0"
               src={Icon_helper}
               alt=""
               width="18px"
@@ -124,7 +124,7 @@ const Navbar = () => {
                   <a
                     className="nav-link active"
                     aria-current="page"
-                    href="index.html"
+                    href="/cart/"
                   >
                     <img src={Icon_cart} alt=""></img>
                   </a>
