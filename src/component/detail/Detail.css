@@ -49,7 +49,7 @@
 }
 
 .card-body {
-	width: 70%;
+	width: 80%;
     font-family: Nunito,serif;
     padding: 20px;
     margin-left: 40px;
@@ -304,5 +304,67 @@
 
 .card-text2 {
 	font-size: 12px;
+}
+
+.cb1 {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.cb2 {
+    font-size: 16px;
+    color: gray;
+}
+
+.cb3 {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.cb4 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+.cb4 svg:hover {
+    cursor: pointer;
+}
+
+.cb5 {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px 20px 0px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-container button {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px 14px;
+    border-radius: 30px;
+}
+
+.btn-cart {
+    color: #0060ae;
+    background-color: white;
+    border: 1px solid #0060ae;
+}
+
+.btn-cart svg {
+    margin-right: 5px;
+}
+
+.btn-checkout {
+    background-color: #0060ae;
+    border: none;
+    color: white;
 }
 /* END FOR DETAIL PAGE */
