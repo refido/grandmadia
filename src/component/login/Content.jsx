@@ -69,50 +69,6 @@ const Content = () => {
     //   console.log(error);
     // }
   };
-
-  //   useEffect(() => {
-  //     return () => {
-  //       dispatch(clearState());
-  //     };
-  //   }, []);
-
-  //   useEffect(() => {
-  //     if (isError) {
-  //       toast.error(errorMessage);
-  //       dispatch(clearState());
-  //     }
-  //     if (isSuccess) {
-  //       dispatch(clearState());
-  //       history.push("/");
-  //     }
-  //   }, [isError, isSuccess]);
-
-  //   const getAccount = async () => {
-  //     try {
-  //       await axios.get(
-  //         "https://grandemedia-clone-server.herokuapp.com/accounts",
-  //         { email, password }
-  //       );
-  //       setEmail(this.email);
-  //       setPassword(this.password);
-  //     } catch (e) {
-  //       console.log(e);
-  //     }
-  //   };
-  //   const handleChangeEmail = (event) => {
-  //     setEmail(event.target.value);
-  //   };
-  //   const handleChangePassword = (event) => {
-  //     setPassword(event.target.value);
-  //   };
-  //   const handleLogin = (event) => {
-  //     event.preventDefault(); // prevent reloading while submitting
-  //     console.log("clicked login");
-  //     // if (!email && password) return;
-  //     // getAccount();
-  //     // navigate("/cart");
-  //   };
-
   return (
     <div className="section-header container">
       <div className="row">
@@ -158,8 +114,9 @@ const Content = () => {
                 }
                 id="floatingInput"
                 placeholder="password"
+                type="password"
               />
-              {errors.email?.message ? (
+              {errors.password?.message ? (
                 <label htmlFor="floatingInputInvalid">
                   {errors.password?.message}
                 </label>
