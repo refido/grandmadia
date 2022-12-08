@@ -11,7 +11,7 @@ const Popular = () => {
 
 	useEffect(() => {
 		dispatch(__getBooks());
-		console.log('getsbook');
+		// console.log('getsbook');
 	},[]);
 
 	if (isLoading) {
