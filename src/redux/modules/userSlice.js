@@ -22,6 +22,25 @@ export const loginUser = createAsyncThunk(
   }
 );
 
+export const signupUser = createAsyncThunk(
+  "users/signup",
+  async ({ name, email, password }, thunkAPI) => {
+    try {
+      const response = await axios.post(
+        "https://grandmadia-api.azurewebsites.net/signup",
+        {
+          name: name,
+          email: email,
+          password: password,
+        }
+      );
+      return response;
+    } catch (e) {
+      return e.response;
+    }
+  }
+);
+
 export const userSlice = createSlice({
   name: "user",
   initialState: {
@@ -52,7 +71,22 @@ export const userSlice = createSlice({
       state.isFetching = true;
     },
   },
-  extraReducers: {},
+  extraReducers: {
+    [signupUser.fulfilled]: (state, { payload }) => {
+      state.isFetching = false;
+      state.isSuccess = true;
+      state.email = payload.email;
+      state.username = payload.name;
+    },
+    [signupUser.pending]: (state) => {
+      state.isFetching = true;
+    },
+    [signupUser.rejected]: (state, { payload }) => {
+      state.isFetching = false;
+      state.isError = true;
+      state.errorMessage = payload.message;
+    },
+  },
 });
 
 export const userSelector = (state) => state.user;
